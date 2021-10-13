@@ -1,0 +1,40 @@
+/* media */
+$media-list: (
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
+);
+
+/* шрифты */
+$averta: "Averta CY", sans-serif;
+$openSans: "Open Sans", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+/* transition */
+$transition: 0.3s ease-in-out;
+
+/* цвета */
+$white: #ffffff;
+$blue: #2babce;
+$lightBlue: #25b3e3;
+$darkBlue: #28386c;
+$electricBlue: #8efffe;
+
+$gradient: linear-gradient(
+  106.16deg,
+  #009ec1 0%,
+  #25d6fd 18.48%,
+  #27e4db 85.75%,
+  #04fff3 98.59%
+);
+
+$darkGradient: radial-gradient(
+  114.69% 368.39% at 2.34% 100%,
+  #02232e 0%,
+  #064e58 17.71%,
+  #22cdc3 100%
+);
