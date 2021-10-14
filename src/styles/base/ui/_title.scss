@@ -1,0 +1,19 @@
+.title {
+  font-family: $averta;
+  font-weight: 800;
+  font-size: vwx(96);
+  line-height: vwx(96);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $darkBlue;
+
+  @include max("lg") {
+    font-size: vw(64);
+    line-height: vw(64);
+  }
+
+  @include max("sm") {
+    font-size: vws(62);
+    line-height: vws(64);
+  }
+}

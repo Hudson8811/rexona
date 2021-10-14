@@ -1,0 +1,6 @@
+.stroked-text {
+  @supports (-webkit-text-stroke: 3px $white) {
+    -webkit-text-stroke: 3px $white;
+    -webkit-text-fill-color: transparent;
+  }
+}

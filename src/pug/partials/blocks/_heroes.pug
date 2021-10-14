@@ -1,0 +1,33 @@
+section.section.heroes
+  .heroes-wrapper
+    .heroes-heading.heroes__heading
+      h2.title.stroked-text.heroes-heading__title
+        | выберите героиню
+    
+    .heroes-list.heroes__list
+      - 
+        const heroes = [
+            { img: 'hero-1.png', quote: 'в Сербии я не смогла прыгнуть с парашютом', name: 'Юля Коваль', position: 'блогер, путешественница', target: '' },
+            { img: 'hero-2.png', quote: 'И тут я вижу, что у него весь Ipad забит моими фотографиями.', name: 'Дарья Смирнова', position: 'преподаватель английского языка, блогер, эксперт-лингвист', target: '' },
+            { img: 'hero-3.png', quote: 'И тут я вижу, что у него весь Ipad забит моими фотографиями.', name: 'настя постригай', position: 'Искусствовед', target: '' },
+            { img: 'hero-4.png', quote: 'История про ремонт моей студии очень показательная.', name: 'Ольга Панасенкова', position: 'основательница и руководитель нейл-студии Ananasnails, топ-мастер маникюра', target: '' },
+            { img: 'hero-5.png', quote: 'машина начинает скатываться с горы задом в этот обрыв', name: 'анна захарова', position: 'актриса театра и кино, хореограф', target: '' },
+          ];
+      each hero in heroes
+        .heroes-item.heroes-list__item
+          input(type="radio", name="hero", data-target= hero.target)
+          
+          span.heroes-item__checkmark
+            svg(width="58" height="72" viewBox="0 0 58 72" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M56.767 0.723972C55.1901 1.98579 47.5197 6.88105 18.4676 46.4041C18.2525 46.684 17.8764 47.2525 17.3295 47.2525L16.3976 46.8392C15.9116 46.5238 3.76774 38.0346 1.47813 36.4887C0.557372 35.8712 0.221455 35.6181 0.037559 35.7559C-0.108092 35.8848 0.185433 36.3955 0.649157 37.1327C1.08356 37.8302 6.62593 47.0569 11.4847 56.1102C15.618 63.8442 18.866 70.2234 19.0091 70.4898C19.4572 71.3471 19.8069 72 20.2792 72C20.9714 72 21.1104 71.3342 21.5406 70.2768C21.9906 69.1973 34.0471 36.3111 57.3582 1.24381C57.7076 0.710701 58.12 0.119764 57.9673 0.0132698L57.9358 0C57.7707 0 57.2419 0.377629 56.767 0.723972Z" fill="white")
+
+          .heroes-item__image
+            .heroes-item__image-item
+              img(src=`images/${hero.img}`, alt=`${hero.name} — ${hero.position}`)
+          
+          .heroes-item__info
+            p.heroes-item__info-quote=`“${hero.quote}“`
+
+            .heroes-item__info-person
+              span.heroes-item__info-name= hero.name
+              span.heroes-item__info-position= hero.position
