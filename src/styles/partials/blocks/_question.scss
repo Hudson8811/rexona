@@ -1,0 +1,211 @@
+.question {
+  &-container {
+    height: 100%;
+  }
+
+  &-story {
+    padding: vwx(40) vwx(92) vwx(40) vwx(187);
+
+    &.readable {
+      height: 100vh;
+      overflow-y: auto;
+
+      .question-story {
+        &__person {
+          display: none;
+        }
+
+        &__item {
+          &-text {
+            &--dots {
+              display: none;
+            }
+
+            &--hidden {
+              display: inline;
+            }
+          }
+
+          &-more {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+
+    &__person {
+      margin-bottom: vwx(13);
+      font-family: $openSans;
+      font-weight: 300;
+      font-size: vwx(21);
+      line-height: vwx(24);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $lightBlue;
+
+      &-image {
+        position: relative;
+        z-index: 0;
+        margin: 0 auto;
+        width: vwx(594);
+        height: vwx(594);
+        border-radius: 50%;
+        overflow: hidden;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: vwx(24) solid $lightBlue;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-name {
+        font-weight: 700;
+      }
+    }
+
+    &__item {
+      font-family: $openSans;
+      font-weight: 600;
+      font-size: vwx(36);
+      line-height: vwx(38);
+      letter-spacing: 0.05em;
+
+      &-text {
+        color: $darkBlue;
+
+        &--hidden {
+          display: none;
+        }
+      }
+
+      &-more {
+        display: inline-block;
+        margin-top: vwx(38);
+        text-transform: uppercase;
+        color: $lightBlue;
+      }
+    }
+  }
+
+  &-answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: vwx(170) vwx(80);
+    text-align: center;
+
+    &__title {
+      margin-bottom: vwx(109);
+    }
+
+    &__buttons {
+      font-family: $openSans;
+      font-weight: 700;
+      font-size: vwx(36);
+      line-height: vwx(42);
+      text-transform: uppercase;
+      color: $white;
+
+      &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: vwx(164);
+        padding: vwx(40) vwx(82);
+        border-radius: vwx(150);
+
+        &--primary {
+          margin-bottom: vwx(60);
+        }
+
+        &--secondary {
+          border: vwx(4) solid $white;
+        }
+      }
+
+      &-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: vwx(150);
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #2babce 0%,
+          #295380 100%
+        );
+        filter: blur(7px);
+      }
+
+      &-checkmark {
+        position: absolute;
+        top: vwx(-31);
+        left: vwx(20);
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+
+        svg {
+          width: vwx(130);
+          height: vwx(161);
+        }
+      }
+
+      input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+
+        &:checked {
+          & ~ .question-answers__buttons {
+            &-checkmark {
+              opacity: 1;
+              visibility: visible;
+              transition: $transition;
+            }
+          }
+        }
+      }
+
+      &-text {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}
