@@ -1,0 +1,363 @@
+.first {
+  position: relative;
+  color: $white;
+  background-color: $black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    @include max("md") {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        #000000 70%,
+        #000000 100%
+      );
+    }
+
+    @include max("sm") {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        #000000 45%,
+        #000000 100%
+      );
+    }
+  }
+
+  &-background {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @include max("md") {
+      height: vws(351);
+    }
+
+    @include max("xxs") {
+      height: vws(400);
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: vwx(44) vwx(42) vwx(32) vwx(188);
+
+    @include max("md") {
+      padding: vws(20);
+    }
+
+    @include max("sm") {
+      justify-content: flex-end;
+    }
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max("sm") {
+      align-items: flex-end;
+    }
+
+    &__logo {
+      width: vwx(87);
+      height: vwx(108);
+
+      @include max("lg") {
+        width: vw(50);
+        height: vw(62);
+      }
+
+      @include max("md") {
+        width: vws(48);
+        height: vws(60);
+      }
+
+      @include max("sm") {
+        width: vws(64);
+        height: vws(80);
+      }
+
+      &-item {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__woman {
+      width: vwx(200);
+      height: vwx(45);
+
+      @include max("lg") {
+        width: vw(120);
+        height: vw(27);
+      }
+
+      @include max("md") {
+        width: vws(122);
+        height: vws(27);
+      }
+
+      &-item {
+        width: 100%;
+        height: 100%;
+
+        @include max("md") {
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    &__title {
+      position: relative;
+      margin-bottom: vwx(42);
+      max-width: vwx(914);
+      font-family: $averta;
+      font-weight: 800;
+      font-size: vwx(112);
+      line-height: vwx(112);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      @include max("lg") {
+        margin-bottom: vw(32);
+        max-width: vw(510);
+        font-size: vw(64);
+        line-height: vw(64);
+      }
+
+      @include max("md") {
+        margin-top: vws(23);
+        margin-bottom: vws(16);
+        max-width: none;
+        font-size: vws(46);
+        line-height: vws(46);
+      }
+
+      &--large {
+        font-size: vwx(165);
+        line-height: vwx(165);
+
+        @include max("lg") {
+          font-size: vw(95);
+          line-height: vw(95);
+        }
+
+        @include max("md") {
+          font-size: vws(68);
+          line-height: vws(68);
+        }
+      }
+
+      &--o-circles {
+        &::before {
+          content: "";
+          position: absolute;
+          top: vwx(2);
+          left: vwx(285);
+          width: vwx(111);
+          height: vwx(114);
+          background: url("../images/circles.png") no-repeat;
+          background-size: cover;
+
+          @include max("lg") {
+            top: vw(2);
+            left: vw(163);
+            width: vw(62);
+            height: vw(64);
+          }
+
+          @include max("md") {
+            top: vws(1);
+            left: vws(117);
+            width: vws(46);
+            height: vws(46);
+          }
+        }
+      }
+    }
+
+    &__text {
+      margin-bottom: vwx(42);
+      max-width: vwx(800);
+      font-weight: 700;
+      font-size: vwx(26);
+      line-height: vwx(36);
+      letter-spacing: 0.05em;
+
+      @include max("lg") {
+        margin-bottom: vw(32);
+        max-width: vw(510);
+        font-size: vw(18);
+        line-height: vw(26);
+      }
+
+      @include max("md") {
+        margin-bottom: vws(13);
+        max-width: vws(370);
+        font-size: vws(12);
+        line-height: vws(17);
+      }
+
+      @include max("sm") {
+        margin-bottom: vws(13);
+        max-width: vws(370);
+        font-size: vws(16);
+        line-height: vws(20);
+      }
+    }
+
+    &__button {
+      @include max("md") {
+        margin-bottom: vws(26);
+        text-align: center;
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__rexona {
+      width: vwx(229);
+      height: vwx(60);
+
+      @include max("lg") {
+        width: vw(135);
+        height: vw(35);
+      }
+
+      @include max("md") {
+        width: vws(100);
+        height: vws(27);
+      }
+
+      @include max("sm") {
+        width: vws(135);
+        height: vws(36);
+      }
+
+      &-item {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-socials {
+    display: flex;
+    align-items: center;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: vwx(42);
+      height: vwx(42);
+      border: 1px solid $white;
+      border-radius: 50%;
+      background-color: transparent;
+      transition: $transition;
+
+      &:not(:last-child) {
+        margin-right: vwx(10);
+      }
+
+      @include hover {
+        background-color: $electricBlue;
+        border-color: $electricBlue;
+
+        svg {
+          path {
+            fill: $blue;
+          }
+        }
+      }
+
+      @include max("md") {
+        width: vws(30);
+        height: vws(30);
+      }
+
+      svg {
+        path: {
+          fill: $electricBlue;
+          transition: $transition;
+        }
+      }
+
+      &--vk {
+        width: vwx(12);
+        height: vwx(12);
+
+        @include max("md") {
+          width: vws(8);
+          height: vws(8);
+        }
+      }
+
+      &--facebook {
+        width: vwx(11);
+        height: vwx(18);
+
+        @include max("md") {
+          width: vws(7);
+          height: vws(12);
+        }
+      }
+
+      &--ok {
+        width: vwx(11);
+        height: vwx(15);
+
+        @include max("md") {
+          width: vws(7);
+          height: vws(10);
+        }
+      }
+
+      &--twitter {
+        width: vwx(17);
+        height: vwx(13);
+
+        @include max("md") {
+          width: vws(12);
+          height: vws(9);
+        }
+      }
+    }
+  }
+}

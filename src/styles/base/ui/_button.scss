@@ -1,0 +1,38 @@
+.button {
+  display: inline-block;
+  padding: vwx(26) vwx(56);
+  font-weight: 700;
+  font-size: vwx(24);
+  line-height: vwx(36);
+  text-transform: uppercase;
+  border-radius: vwx(50);
+  color: $blue;
+  background-color: $white;
+  transition: $transition;
+
+  @include hover {
+    color: $white;
+    background-color: $blue;
+  }
+
+  @include max("lg") {
+    padding: vw(20) vw(50);
+    border-radius: vw(50);
+    font-size: vw(18);
+    line-height: vw(24);
+  }
+
+  @include max("md") {
+    padding: vws(10) vws(16);
+    font-size: vws(10);
+    line-height: vws(16);
+    border-radius: vws(30);
+  }
+
+  @include max("sm") {
+    padding: vws(20) vws(26);
+    font-size: vws(18);
+    line-height: vws(18);
+    border-radius: vws(50);
+  }
+}

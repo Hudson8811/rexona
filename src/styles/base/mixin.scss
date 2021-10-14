@@ -71,3 +71,16 @@
     }
   }
 }
+
+// ToVw
+@function vwx($px, $resolutiond: 1920) {
+  @return (($px/$resolutiond) * 100) + vw;
+}
+
+@function vw($px, $resolutiond: 1440) {
+  @return (($px/$resolutiond) * 100) + vw;
+}
+
+@function vws($px, $resolutiond: 414) {
+  @return (($px/$resolutiond) * 100) + vw;
+}

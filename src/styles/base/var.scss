@@ -4,9 +4,9 @@ $media-list: (
   "xs": 560,
   "sm": 767,
   "md": 1079,
-  "lg": 1279,
+  "lg": 1439,
   "xl": 1599,
-  "xxl": 1900,
+  "xxl": 1920,
 );
 
 /* шрифты */
@@ -19,6 +19,7 @@ $transition: 0.3s ease-in-out;
 
 /* цвета */
 $white: #ffffff;
+$black: #000000;
 $blue: #2babce;
 $lightBlue: #25b3e3;
 $darkBlue: #28386c;
