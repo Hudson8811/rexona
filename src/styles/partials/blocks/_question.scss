@@ -1,14 +1,30 @@
 .question {
   &-container {
     height: 100%;
+
+    @include max("md") {
+      height: auto;
+    }
   }
 
   &-story {
     padding: vwx(40) vwx(92) vwx(40) vwx(187);
 
+    @include max("md") {
+      padding: vws(30) vws(30) vws(34);
+    }
+
+    @include max("sm") {
+      padding: vws(16) vws(20) vws(24);
+    }
+
     &.readable {
       height: 100vh;
       overflow-y: auto;
+
+      @include max("md") {
+        height: auto;
+      }
 
       .question-story {
         &__person {
@@ -44,6 +60,24 @@
       text-transform: uppercase;
       color: $lightBlue;
 
+      @include max("lg") {
+        margin-bottom: vw(13);
+        font-size: vw(16);
+        line-height: vw(19);
+      }
+
+      @include max("md") {
+        margin-bottom: vws(12);
+        font-size: vws(10);
+        line-height: vws(13);
+        text-align: center;
+      }
+
+      @include max("sm") {
+        font-size: vws(16);
+        line-height: vws(18);
+      }
+
       &-image {
         position: relative;
         z-index: 0;
@@ -52,6 +86,23 @@
         height: vwx(594);
         border-radius: 50%;
         overflow: hidden;
+
+        @include max("lg") {
+          width: vw(350);
+          height: vw(350);
+        }
+
+        @include max("md") {
+          margin-bottom: vws(8);
+          width: vws(142);
+          height: vws(142);
+        }
+
+        @include max("sm") {
+          margin-bottom: vws(12);
+          width: vws(202);
+          height: vws(202);
+        }
 
         &::after {
           content: "";
@@ -64,6 +115,10 @@
           height: 100%;
           border-radius: 50%;
           border: vwx(24) solid $lightBlue;
+
+          @include max("sm") {
+            border-width: vws(10);
+          }
         }
 
         img {
@@ -90,6 +145,21 @@
       line-height: vwx(38);
       letter-spacing: 0.05em;
 
+      @include max("lg") {
+        font-size: vw(22);
+        line-height: vw(24);
+      }
+
+      @include max("md") {
+        font-size: vws(12);
+        line-height: vws(15);
+      }
+
+      @include max("sm") {
+        font-size: vws(18);
+        line-height: vws(24);
+      }
+
       &-text {
         color: $darkBlue;
 
@@ -103,6 +173,14 @@
         margin-top: vwx(38);
         text-transform: uppercase;
         color: $lightBlue;
+
+        @include max("lg") {
+          margin-top: vw(24);
+        }
+
+        @include max("sm") {
+          margin-top: vws(24);
+        }
       }
     }
   }
@@ -116,8 +194,20 @@
     padding: vwx(170) vwx(80);
     text-align: center;
 
+    @include max("md") {
+      padding: vws(30);
+    }
+
+    @include max("sm") {
+      padding: vws(33) vws(20) vws(54);
+    }
+
     &__title {
       margin-bottom: vwx(109);
+
+      @include max("md") {
+        margin-bottom: vws(30);
+      }
     }
 
     &__buttons {
@@ -128,22 +218,62 @@
       text-transform: uppercase;
       color: $white;
 
+      @include max("lg") {
+        font-size: vw(22);
+        line-height: vw(24);
+      }
+
+      @include max("md") {
+        max-width: vws(300);
+        font-size: vws(14);
+        line-height: vws(14);
+      }
+
+      @include max("sm") {
+        max-width: none;
+        font-size: vws(18);
+        line-height: vws(18);
+      }
+
       &-item {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: vwx(164);
+        min-height: vwx(164);
         padding: vwx(40) vwx(82);
         border-radius: vwx(150);
 
+        @include max("lg") {
+          border-radius: vw(150);
+        }
+
+        @include max("md") {
+          min-height: vws(49);
+          padding: vws(10) vws(22);
+          border-radius: vws(150);
+        }
+
+        @include max("sm") {
+          min-height: vws(79);
+          padding: vws(20) vws(30);
+        }
+
         &--primary {
           margin-bottom: vwx(60);
+
+          @include max("sm") {
+            margin-bottom: vws(26);
+          }
         }
 
         &--secondary {
           border: vwx(4) solid $white;
+
+          @include max("sm") {
+            border-width: vws(2);
+          }
         }
       }
 
@@ -163,6 +293,14 @@
           #295380 100%
         );
         filter: blur(7px);
+
+        @include max("lg") {
+          border-radius: vw(150);
+        }
+
+        @include max("md") {
+          border-radius: vws(150);
+        }
       }
 
       &-checkmark {
@@ -173,9 +311,28 @@
         visibility: hidden;
         transition: $transition;
 
+        @include max("md") {
+          top: vws(-14);
+        }
+
+        @include max("sm") {
+          top: vws(-18);
+          left: 0;
+        }
+
         svg {
           width: vwx(130);
           height: vwx(161);
+
+          @include max("md") {
+            width: vws(40);
+            height: vws(50);
+          }
+
+          @include max("sm") {
+            width: vws(60);
+            height: vws(75);
+          }
         }
       }
 

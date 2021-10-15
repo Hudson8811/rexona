@@ -1,8 +1,16 @@
 .columns {
   display: flex;
 
+  @include max("md") {
+    flex-direction: column;
+  }
+
   &__half {
     flex: 0 0 50%;
+
+    @include max("md") {
+      flex-basis: 100%;
+    }
 
     &--gradient {
       background: $gradient;

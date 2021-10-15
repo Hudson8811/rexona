@@ -16,4 +16,16 @@
     font-size: vws(62);
     line-height: vws(64);
   }
+
+  &--mobile {
+    @include max("md") {
+      font-size: vws(30);
+      line-height: vws(30);
+    }
+
+    @include max("sm") {
+      font-size: vws(48);
+      line-height: vws(48);
+    }
+  }
 }
