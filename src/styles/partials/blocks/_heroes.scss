@@ -191,7 +191,7 @@
           height: vws(48);
         }
 
-        @include max("md") {
+        @include max("sm") {
           width: vws(145);
           height: vws(145);
         }

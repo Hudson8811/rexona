@@ -69,6 +69,7 @@
     padding: vwx(44) vwx(42) vwx(32) vwx(188);
 
     @include max("md") {
+      height: 100vh;
       padding: vws(20);
     }
 
