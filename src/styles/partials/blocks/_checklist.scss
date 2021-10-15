@@ -1,0 +1,201 @@
+.checklist {
+  padding: vwx(74) vwx(30) vwx(36);
+
+  @include max("lg") {
+    padding-top: vw(36);
+  }
+
+  @include max("md") {
+    padding: vws(26) vws(20) vws(20);
+  }
+
+  &-text {
+    position: relative;
+    padding: vwx(49) vwx(102) vwx(32) vwx(153);
+    font-family: $roboto;
+    font-weight: 500;
+    font-size: vwx(48);
+    line-height: vwx(52);
+    letter-spacing: 0.05em;
+    color: $darkBlue;
+
+    @include max("lg") {
+      font-size: vw(30);
+      line-height: vw(34);
+    }
+
+    @include max("md") {
+      padding: vws(19) 0 vws(16);
+      font-size: vws(15);
+      line-height: vws(15);
+    }
+
+    @include max("sm") {
+      font-size: vws(24);
+      line-height: vws(24);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: vwx(2);
+      background: $gradient;
+
+      @include max("md") {
+        height: vws(2);
+      }
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: vwx(1546);
+    margin: 0 auto;
+
+    @include max("sm") {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-basis: 49%;
+    margin-bottom: vwx(20);
+    padding-left: vwx(133);
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: vwx(21);
+    line-height: vwx(28);
+    letter-spacing: 0.05em;
+    color: $darkBlue;
+    user-select: none;
+    cursor: pointer;
+
+    @include max("md") {
+      flex-basis: 100%;
+      margin-bottom: vws(20);
+      padding-left: vws(43);
+      font-size: vws(9);
+      line-height: vws(12);
+    }
+
+    @include max("sm") {
+      margin-bottom: vws(19);
+      padding-left: vws(86);
+      font-size: vws(16);
+      line-height: vws(18);
+    }
+
+    &:nth-child(2n) {
+      margin-left: vwx(20);
+
+      @include max("md") {
+        margin-left: 0;
+      }
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked ~ .checklist-item__checkmark::after {
+        opacity: 1;
+        transition: $transition;
+      }
+    }
+
+    &__checkmark {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: vwx(70);
+      height: vwx(70);
+      border-radius: 50%;
+      border: vwx(7) solid $blue;
+
+      @include max("md") {
+        width: vws(28);
+        height: vws(28);
+      }
+
+      @include max("sm") {
+        width: vws(56);
+        height: vws(56);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: vwx(-22);
+        left: 0;
+        width: vwx(64);
+        height: vwx(81);
+        background: url("../images/checkmark-dark.svg") no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: $transition;
+
+        @include max("md") {
+          top: vws(-6);
+          left: vws(2);
+          width: vws(24);
+          height: vws(30);
+        }
+
+        @include max("sm") {
+          top: vws(-11);
+          left: vws(4);
+          width: vws(48);
+          height: vws(60);
+        }
+      }
+    }
+  }
+
+  &__title {
+    max-width: vwx(900);
+    margin: vwx(32) auto;
+    font-family: $averta;
+    font-weight: 800;
+    font-size: vwx(64);
+    line-height: vwx(64);
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    @include max("lg") {
+      font-size: vw(40);
+      line-height: vw(40);
+    }
+
+    @include max("md") {
+      max-width: vws(225);
+      margin: vws(19) auto;
+      font-size: vws(16);
+      line-height: vws(17);
+    }
+
+    @include max("sm") {
+      max-width: none;
+      font-size: vws(26);
+      line-height: vws(32);
+    }
+  }
+}
