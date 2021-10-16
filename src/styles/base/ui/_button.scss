@@ -10,6 +10,7 @@
   color: $blue;
   background-color: $white;
   transition: $transition;
+  cursor: pointer;
 
   @include hover {
     color: $white;
