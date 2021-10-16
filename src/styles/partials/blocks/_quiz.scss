@@ -2,6 +2,7 @@
   color: $white;
   background: $gradient;
 
+  // Основные элементы секции
   &-title {
     font-size: vwx(144);
     line-height: vwx(144);
@@ -70,6 +71,7 @@
       justify-content: center;
       align-items: center;
       height: 100%;
+      overflow: hidden;
     }
   }
 
@@ -162,6 +164,7 @@
     }
   }
 
+  // Элементы секции в конкретном блоке
   &-index {
     padding: vwx(220) vwx(323) vwx(185) vwx(187);
 
@@ -266,6 +269,107 @@
 
         @include max("md") {
           margin-bottom: vws(22);
+        }
+      }
+    }
+  }
+
+  &-reg {
+    position: relative;
+    padding: vwx(192) vwx(187) vwx(222);
+
+    @include max("md") {
+      padding: vws(63) vws(20) vws(92);
+    }
+
+    &__bg {
+      position: absolute;
+      right: vwx(-363);
+      bottom: 0;
+      z-index: 0;
+      width: vwx(1000);
+
+      @include max("lg") {
+        width: vw(650);
+      }
+
+      @include max("md") {
+        width: vws(237);
+      }
+
+      @include max("sm") {
+        right: vws(-147);
+        width: vws(307);
+      }
+
+      &-item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      max-width: vwx(1244);
+      margin-right: auto;
+      margin-bottom: vwx(36);
+      letter-spacing: normal;
+      text-align: left;
+
+      @include max("md") {
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: vws(35);
+      }
+    }
+
+    &__text {
+      max-width: vwx(784);
+      margin-right: auto;
+      margin-bottom: vwx(73);
+      margin-left: vwx(148);
+
+      @include max("md") {
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: vws(34);
+        margin-left: vws(43);
+      }
+    }
+
+    &__cta {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: vwx(1096);
+      margin-right: auto;
+
+      @include max("md") {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: none;
+      }
+
+      &-text {
+        font-family: $averta;
+        font-weight: 900;
+        font-size: vwx(48);
+        line-height: vwx(48);
+        text-transform: uppercase;
+        color: $darkBlue;
+
+        @include max("md") {
+          margin-bottom: vws(50);
+          font-size: vws(24);
+          line-height: vws(24);
+        }
+
+        @include max("sm") {
+          margin-bottom: vws(50);
+          font-size: vws(24);
+          line-height: vws(24);
         }
       }
     }
