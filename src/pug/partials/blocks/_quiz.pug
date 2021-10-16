@@ -1,14 +1,43 @@
 section.section.quiz
   .quiz-sections
-    .quiz-index.quiz-sections__index
-      h2.title.quiz-title.quiz-index__title
-        span.stroked-text.quiz-title--stroked
-          | От чего вас 
-        | бросает в пот?
+    //- .quiz-index.quiz-sections__item
+    //-   h2.title.quiz-title.quiz-index__title
+    //-     span.stroked-text.quiz-title--stroked
+    //-       | От чего вас 
+    //-     | бросает в пот?
       
-      p.quiz-text.quiz-index__text
-        | Подняться на смотровую площадку без перил или забыть родной язык при встрече с кумиром? У каждой из нас свои триггеры. Пройдите тест и отметьте узнаваемые для себя ситуации, а в результатах узнайте, какой приз от бренда Rexona подойдет именно вам! Готовы "попотеть"?
+    //-   p.quiz-text.quiz-index__text
+    //-     | Подняться на смотровую площадку без перил или забыть родной язык при встрече с кумиром? У каждой из нас свои триггеры. Пройдите тест и отметьте узнаваемые для себя ситуации, а в результатах узнайте, какой приз от бренда Rexona подойдет именно вам! Готовы "попотеть"?
       
-      .quiz-index__button
-        a(href="#").button.quiz-button.quiz-index__button-item
-          | пройти тест 
+    //-   .quiz-index__button
+    //-     a(href="#").button.quiz-button.quiz-index__button-item
+    //-       | пройти тест 
+
+    - 
+      const sections = [
+        {
+          title: 'Вас бросает в&nbsp;пот, когда...',
+          answers: [
+            { value: 1, text: 'вместо подруги случайно отправила сообщение начальнику' },
+            { value: 0, text: 'забыла оплатить проезд в транспорте или решила проехать зайцем' },
+            { value: 0, text: 'в спортзал заходит горячий парень' },
+            { value: 0, text: 'когда не влезаете в любимые джинсы' },
+          ],
+        },
+      ];
+      
+    each section, index in sections
+      .quiz-item.quiz-sections__item
+        span.title.stroked-text.quiz-title.quiz-item__position
+          span.quiz-item__position--current= (index + 1)
+          span.quiz-item__position--total=  '/' + sections.length
+
+        h3.title.quiz-title.quiz-item__title !{section.title}
+
+        .quiz-item__answers
+          each answer in section.answers
+            .quiz-item__answers-item
+              label.quiz-answer
+                input(type="radio", name=`question-${index}` data-value= answer.value).quiz-answer__input
+                span.quiz-answer__checkmark
+                span.quiz-text.quiz-answer__text= answer.text

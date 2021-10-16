@@ -5,6 +5,7 @@
   &-title {
     font-size: vwx(144);
     line-height: vwx(144);
+    letter-spacing: normal;
 
     @include max("lg") {
       font-size: vw(95);
@@ -13,24 +14,14 @@
 
     @include max("md") {
       text-align: center;
-      font-size: vws(38);
-      line-height: vws(38);
-    }
-
-    @include max("sm") {
-      font-size: vws(38);
-      line-height: vws(42);
+      font-size: vws(45);
+      line-height: vws(48);
     }
 
     &--stroked {
       @include max("md") {
-        font-size: vws(50);
-        line-height: vws(50);
-      }
-
-      @include max("sm") {
-        font-size: vws(50);
-        line-height: vws(56);
+        font-size: vws(58);
+        line-height: vws(64);
       }
     }
   }
@@ -70,6 +61,107 @@
     }
   }
 
+  &-sections {
+    height: 100vh;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  &-answer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: vwx(70);
+    padding-left: vwx(133);
+    user-select: none;
+    cursor: pointer;
+
+    @include max("md") {
+      min-height: vwx(25);
+      padding-left: vws(36);
+    }
+
+    @include max("sm") {
+      min-height: vwx(50);
+      padding-left: vws(77);
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked {
+        pointer-events: none;
+
+        & ~ .quiz-answer__checkmark::after {
+          opacity: 1;
+          transition: $transition;
+        }
+      }
+    }
+
+    &__checkmark {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: vwx(70);
+      height: vwx(70);
+      border-radius: 50%;
+      border: vwx(13) solid $white;
+
+      @include max("md") {
+        width: vws(25);
+        height: vws(25);
+        border-width: vws(4);
+      }
+
+      @include max("sm") {
+        width: vws(50);
+        height: vws(50);
+        border-width: vws(8);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: vwx(-36);
+        left: 0;
+        width: vwx(64);
+        height: vwx(81);
+        background: url("../images/checkmark-dark.svg") no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transition: $transition;
+
+        @include max("md") {
+          top: vws(-15);
+          left: 0;
+          width: vws(24);
+          height: vws(30);
+        }
+
+        @include max("sm") {
+          top: vws(-25);
+          left: 0;
+          width: vws(48);
+          height: vws(60);
+        }
+      }
+    }
+
+    &__text {
+      font-weight: 600;
+    }
+  }
+
   &-index {
     padding: vwx(220) vwx(323) vwx(185) vwx(187);
 
@@ -79,6 +171,10 @@
     }
 
     @include max("md") {
+      padding: vws(90) vws(20) vws(90);
+    }
+
+    @include max("sm") {
       padding: vws(103) vws(20) vws(101);
     }
 
@@ -119,6 +215,57 @@
 
         @include max("sm") {
           min-width: vws(288);
+        }
+      }
+    }
+  }
+
+  &-item {
+    position: relative;
+    padding: vwx(130) vwx(187);
+
+    @include max("md") {
+      padding: vws(63) vws(20);
+    }
+
+    &__position {
+      position: absolute;
+      bottom: vwx(130);
+      left: vwx(187);
+
+      @include max("md") {
+        bottom: vws(20);
+        left: vws(20);
+      }
+    }
+
+    &__title {
+      max-width: vwx(1096);
+      margin-right: auto;
+      margin-bottom: vwx(85);
+
+      @include max("md") {
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: vws(56);
+        text-align: left;
+      }
+    }
+
+    &__answers {
+      max-width: vwx(920);
+      margin-left: auto;
+
+      @include max("md") {
+        max-width: none;
+        margin-left: 0;
+      }
+
+      &-item {
+        margin-bottom: vwx(44);
+
+        @include max("md") {
+          margin-bottom: vws(22);
         }
       }
     }
