@@ -1,0 +1,126 @@
+.quiz {
+  color: $white;
+  background: $gradient;
+
+  &-title {
+    font-size: vwx(144);
+    line-height: vwx(144);
+
+    @include max("lg") {
+      font-size: vw(95);
+      line-height: vw(95);
+    }
+
+    @include max("md") {
+      text-align: center;
+      font-size: vws(38);
+      line-height: vws(38);
+    }
+
+    @include max("sm") {
+      font-size: vws(38);
+      line-height: vws(42);
+    }
+
+    &--stroked {
+      @include max("md") {
+        font-size: vws(50);
+        line-height: vws(50);
+      }
+
+      @include max("sm") {
+        font-size: vws(50);
+        line-height: vws(56);
+      }
+    }
+  }
+
+  &-text {
+    font-weight: 700;
+    font-size: vwx(26);
+    line-height: vwx(36);
+    letter-spacing: 0.05em;
+
+    @include max("lg") {
+      font-size: vw(18);
+      line-height: vw(24);
+    }
+
+    @include max("md") {
+      font-size: vws(14);
+      line-height: vws(19);
+    }
+
+    @include max("sm") {
+      font-size: vws(18);
+      line-height: vws(24);
+    }
+  }
+
+  &-button {
+    display: inline-block;
+    min-width: vwx(354);
+
+    @include max("md") {
+      max-width: vws(147);
+    }
+
+    @include max("sm") {
+      max-width: vws(247);
+    }
+  }
+
+  &-index {
+    padding: vwx(220) vwx(323) vwx(185) vwx(187);
+
+    @include max("lg") {
+      padding-top: vwx(117);
+      padding-bottom: vwx(117);
+    }
+
+    @include max("md") {
+      padding: vws(103) vws(20) vws(101);
+    }
+
+    &__title {
+      margin-bottom: vwx(78);
+
+      @include max("md") {
+        margin-bottom: vws(37);
+      }
+    }
+
+    &__text {
+      max-width: vwx(780);
+      margin-bottom: vwx(38);
+      margin-left: auto;
+
+      @include max("md") {
+        max-width: none;
+        margin-bottom: vws(37);
+        margin-left: vws(43);
+      }
+    }
+
+    &__button {
+      max-width: vwx(780);
+      margin-left: auto;
+
+      @include max("md") {
+        max-width: none;
+        margin-left: 0;
+        text-align: center;
+      }
+
+      &-item {
+        @include max("md") {
+          min-width: vws(188);
+        }
+
+        @include max("sm") {
+          min-width: vws(288);
+        }
+      }
+    }
+  }
+}
