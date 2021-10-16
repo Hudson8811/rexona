@@ -709,8 +709,8 @@
 
     &__loader {
       width: 8em;
-      margin: auto;
       text-align: center;
+      user-select: none;
 
       &-item {
         width: 2em;
