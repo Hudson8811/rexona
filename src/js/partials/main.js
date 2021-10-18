@@ -1,3 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+//= quiz.js
 
+document.addEventListener("DOMContentLoaded", () => {
+  quiz();
 });

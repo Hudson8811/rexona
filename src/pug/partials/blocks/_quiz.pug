@@ -1,4 +1,4 @@
-section.section.quiz
+section.section.quiz#quiz
   .quiz-sections
     //- Начало квиза
     .quiz-index.quiz-sections__item.active
@@ -94,7 +94,7 @@ section.section.quiz
               .quiz-modal__first
                 //- Инпуты
                 .quiz-modal__inputs
-                  input(type="hidden" id='result' value='')
+                  input(type="hidden" id='result' name='result' value='')
 
                   .quiz-modal__inputs-group
                     input(type="text" name="first-name" placeholder="имя" required).quiz-modal__inputs-item
