@@ -765,6 +765,29 @@
     &__after {
       display: none;
     }
+
+    &__error {
+      display: none;
+      margin-top: vwx(15);
+      font-family: $roboto;
+      font-weight: 500;
+      font-size: vwx(16);
+      color: red;
+
+      @include max("lg") {
+        margin-top: vw(15);
+        font-size: vw(16);
+      }
+
+      @include max("md") {
+        margin-top: vws(15);
+        font-size: vws(12);
+      }
+
+      @include max("sm") {
+        font-size: vws(16);
+      }
+    }
   }
 }
 

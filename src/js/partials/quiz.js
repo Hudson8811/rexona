@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 //= ./quiz/setActiveSection.js
 //= ./quiz/calcResult.js
+//= ./quiz/postData.js
 
 function quiz() {
   const RESULTS = {
@@ -28,19 +29,26 @@ function quiz() {
     resultTitle = quiz.querySelector('.quiz-reg__title'),
     resultText = quiz.querySelector('.quiz-reg__text'),
     answers = [],
-    modal = document.querySelector('.quiz-reg__modal');
+    modal = document.querySelector('.quiz-reg__modal'),
+    modalRegistration = modal.querySelector('.quiz-modal__first'),
+    modalLoader = modal.querySelector('.quiz-modal__loader'),
+    modalAfter = modal.querySelector('.quiz-modal__after'),
+    modalError = modal.querySelector('.quiz-modal__error'),
+    form = quiz.querySelector('form');
 
   let activeSection = 0;
 
   quiz.addEventListener('click', e => {
     if (e.target.classList.contains('quiz-index__button-item')) {
       e.preventDefault();
+
       activeSection++;
       setActiveSection(sections, activeSection);
     }
 
     if (e.target.classList.contains('quiz-answer__input')) {
       activeSection++;
+
       answers.push(e.target.dataset.value);
 
       if (activeSection === sections.length - 1) {
@@ -65,5 +73,59 @@ function quiz() {
     }
 
     // console.log(e.target);
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    modalRegistration.style.display = 'none';
+    modalLoader.style.display = 'block';
+
+    const formData = new FormData(form),
+      body = {};
+
+    formData.forEach((value, key) => {
+      body[key] = value;
+    });
+
+    postData(body)
+      .then(response => {
+        if (response.status !== 200) {
+          throw new Error('Network status is not 200');
+        }
+
+        return response;
+      })
+      .then(data => {
+        const result = JSON.parse(data);
+
+        if (result.error_no === 0) {
+
+          setTimeout(() => {
+            modalLoader.style.display = 'none';
+            modalAfter.style.display = 'block';
+          }, 2000);
+
+        } else if (result.error_no > 1) {
+
+          setTimeout(() => {
+            modalLoader.style.display = 'none';
+            modalRegistration.style.display = 'block';
+
+            modalError.textContent = result.error_text;
+            modalError.style.display = 'block';
+          }, 2000);
+
+        }
+      })
+      .catch(error => {
+        console.error(error);
+
+        setTimeout(() => {
+          modalLoader.style.display = 'none';
+          modalRegistration.style.display = 'block';
+          modalError.style.display = 'block';
+        }, 2000);
+      });
   });
 }
