@@ -1,7 +1,7 @@
-section.section.question
+section.section.question#question
   .columns.question-container
     .columns__half.question-container__left
-      .question-story
+      .question-story.js-more-parent
         .question-story__person
           .question-story__person-image
             img(src="images/hero-1.png", alt="Юля Коваль — блогер, путешественница")
@@ -21,7 +21,7 @@ section.section.question
             span.question-story__item-text--hidden
               | , это заставляет меня испытывать стресс, нервничать и переживать. Приключений, когда у меня дрожали руки и бросало в пот, в жизни было много. Одна из таких ситуаций произошла во время съемок программы «Орел и решка», и она чуть не стоила мне и команде жизни. Мы спускались в шахту в Африке на глубину 1500 метров. Давили отсутствие воздуха и кромешная тьма. Еще бы, полтора километра вглубь нашей планеты! Там абсолютно не было никакого воздуха, было темно и страшно. Мы шли по маленькой самодельной лестнице — это была даже не лестница, а просто палки! И тут с грохотом во мраке взорвался динамит. 
           
-          a(href="#").question-story__item-more
+          a(href="#").js-more.question-story__item-more
             | читать дальше 
 
     .columns__half.columns__half--gradient.question-container__right
@@ -33,7 +33,7 @@ section.section.question
           .question-answers__buttons-item.question-answers__buttons-item--primary
             .question-answers__buttons-bg
             
-            input(type="radio", name="story", data-target="correct")
+            input(type="radio", name="story", data-nav="#answer" data-answer="correct").js-nav.js-radio
           
             span.question-answers__buttons-checkmark
               svg(width="58" height="72" viewBox="0 0 58 72" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -42,7 +42,7 @@ section.section.question
             span.question-answers__buttons-text Я сжала волю в кулак, сконцентрировалась и пошла вперед
 
           .question-answers__buttons-item.question-answers__buttons-item--secondary
-            input(type="radio", name="story", data-target="wrong")
+            input(type="radio", name="story", data-nav="#answer" data-answer="wrong").js-nav.js-radio
           
             span.question-answers__buttons-checkmark
               svg(width="58" height="72" viewBox="0 0 58 72" fill="none" xmlns="http://www.w3.org/2000/svg")

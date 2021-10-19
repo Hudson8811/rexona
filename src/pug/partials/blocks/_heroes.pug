@@ -1,4 +1,4 @@
-section.section.heroes
+section.section.heroes#heroes
   .heroes-wrapper
     .heroes-heading.heroes__heading
       h2.title.stroked-text.heroes-heading__title
@@ -7,15 +7,15 @@ section.section.heroes
     .heroes-list.heroes__list
       - 
         const heroes = [
-            { img: 'hero-1.png', quote: 'в Сербии я не смогла прыгнуть с парашютом', name: 'Юля Коваль', position: 'блогер, путешественница', target: '' },
-            { img: 'hero-2.png', quote: 'И тут я вижу, что у него весь Ipad забит моими фотографиями.', name: 'Дарья Смирнова', position: 'преподаватель английского языка, блогер, эксперт-лингвист', target: '' },
-            { img: 'hero-3.png', quote: 'И тут я вижу, что у него весь Ipad забит моими фотографиями.', name: 'настя постригай', position: 'Искусствовед', target: '' },
-            { img: 'hero-4.png', quote: 'История про ремонт моей студии очень показательная.', name: 'Ольга Панасенкова', position: 'основательница и руководитель нейл-студии Ananasnails, топ-мастер маникюра', target: '' },
-            { img: 'hero-5.png', quote: 'машина начинает скатываться с горы задом в этот обрыв', name: 'анна захарова', position: 'актриса театра и кино, хореограф', target: '' },
+            { img: 'hero-1.png', quote: 'в Сербии я не смогла прыгнуть с парашютом', name: 'Юля Коваль', position: 'блогер, путешественница', target: '1' },
+            { img: 'hero-2.png', quote: 'И тут я вижу, что у него весь Ipad забит моими фотографиями.', name: 'Дарья Смирнова', position: 'преподаватель английского языка, блогер, эксперт-лингвист', target: '2' },
+            { img: 'hero-3.png', quote: 'И тут я вижу, что у него весь Ipad забит моими фотографиями.', name: 'настя постригай', position: 'искусствовед, основатель самой крупной в России онлайн-школы по изучению истории искусства OP-POP-ART', target: '3' },
+            { img: 'hero-4.png', quote: 'История про ремонт моей студии очень показательная.', name: 'Ольга Панасенкова', position: 'основательница и руководитель нейл-студии Ananasnails, топ-мастер маникюра', target: '4' },
+            { img: 'hero-5.png', quote: 'машина начинает скатываться с горы задом в этот обрыв', name: 'анна захарова', position: 'актриса театра и кино, хореограф', target: '5' },
           ];
       each hero in heroes
         .heroes-item.heroes-list__item
-          input(type="radio", name="hero", data-target= hero.target)
+          input(type="radio", name="hero", data-nav="#question", data-target= hero.target).js-nav
           
           span.heroes-item__checkmark
             svg(width="58" height="72" viewBox="0 0 58 72" fill="none" xmlns="http://www.w3.org/2000/svg")

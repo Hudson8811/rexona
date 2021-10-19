@@ -44,20 +44,30 @@
         }
 
         &__item {
-          &-text {
-            &--dots {
-              display: none;
-            }
+          // &-text {
+          //   &--dots {
+          //     display: none;
+          //   }
 
-            &--hidden {
-              display: inline;
-            }
-          }
+          //   &--hidden {
+          //     display: inline;
+          //   }
+          // }
 
           &-more {
             opacity: 0;
             visibility: hidden;
           }
+        }
+      }
+
+      .story-item {
+        &__dots {
+          display: none;
+        }
+
+        &__hidden {
+          display: inline;
         }
       }
     }
@@ -175,7 +185,7 @@
     }
 
     &__item {
-      max-width: vwx(730);
+      max-width: vwx(750);
       margin: 0 auto;
       font-family: $openSans;
       font-weight: 600;
@@ -258,24 +268,6 @@
 
     @include max("md") {
       padding: vws(13) vws(20) vws(90);
-    }
-
-    &.readable {
-      overflow-y: auto;
-
-      .answer-advise__text {
-        &--dots {
-          display: none;
-        }
-
-        &--hidden {
-          display: inline;
-        }
-
-        &-more {
-          display: none;
-        }
-      }
     }
 
     &__product {
@@ -378,6 +370,23 @@
       }
     }
 
+    &__info {
+      &.readable {
+        height: 50vh;
+        overflow-y: auto;
+
+        .story-item {
+          &__dots {
+            display: none;
+          }
+
+          &__hidden {
+            display: inline;
+          }
+        }
+      }
+    }
+
     &__text {
       margin: 0 vwx(104) 0 vwx(339);
       font-family: $openSans;
@@ -409,18 +418,30 @@
       }
 
       &-more {
+        margin: vwx(38) vwx(104) 0 vwx(339);
         display: block;
-        margin-left: auto;
-        margin-top: vwx(38);
+        font-size: vwx(36);
+        line-height: vwx(38);
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         color: $lightBlue;
 
         @include max("lg") {
           margin-top: vw(24);
+          font-size: vw(22);
+          line-height: vw(24);
+        }
+
+        @include max("md") {
+          margin: vw(24) 0 0 auto;
+          font-size: vws(12);
+          line-height: vws(15);
         }
 
         @include max("sm") {
           margin-top: vws(24);
+          font-size: vws(18);
+          line-height: vws(24);
         }
       }
     }

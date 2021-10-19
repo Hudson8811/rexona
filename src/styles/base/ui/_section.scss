@@ -1,9 +1,14 @@
 .section {
+  display: none;
   width: 100vw;
   height: 100vh;
 
   @include max("md") {
     min-height: 100vh;
     height: auto;
+  }
+
+  &.active {
+    display: block;
   }
 }
