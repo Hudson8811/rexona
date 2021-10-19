@@ -1,4 +1,5 @@
 function fillPhoto(photo, name, position, elem) {
-  elem.src = `/images/${photo}`;
+  // Temp: all imgs have 'build/...'
+  elem.src = `./build/images/${photo}`;
   elem.alt = `${name} — ${position}`;
 }

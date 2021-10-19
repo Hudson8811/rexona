@@ -103,8 +103,4 @@ function navigation() {
       }
     }
   });
-
-  document.addEventListener('scroll', e => {
-    console.log(e);
-  });
 }
