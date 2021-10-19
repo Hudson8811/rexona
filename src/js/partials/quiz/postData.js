@@ -1,5 +1,5 @@
 function postData(body) {
-  return fetch('./save_form/', {
+  return fetch('/save_form/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

@@ -106,7 +106,7 @@ function quiz() {
             modalAfter.style.display = 'block';
           }, 2000);
 
-        } else if (result.error_no > 1) {
+        } else if (result.error_no > 0) {
 
           setTimeout(() => {
             modalLoader.style.display = 'none';

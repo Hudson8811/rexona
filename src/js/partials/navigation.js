@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable max-len */
 
 //= ./navigation/setACtiveBlock.js
@@ -9,11 +10,38 @@
 //= ./navigation/fillAnswerBlock.js
 
 function navigation() {
-  const SECTIONS = [
+  const SECTIONS = [ '#first', '#heroes', '#question', '#answer', '#quiz' ];
 
-  ];
+  let selectedHero = {},
+    currentSection = 0;
 
-  let selectedHero = {};
+  const getSectionIndex = elem => {
+    for (const key in SECTIONS) {
+      console.log(key);
+      if (SECTIONS[key] === elem) return key;
+    }
+  };
+
+  const indicator = new WheelIndicator({
+    elem: document.querySelector('.main'),
+    callback: function(e) {
+      if (e.direction === 'down') {
+        if (currentSection < SECTIONS.length - 1) {
+          if (document.querySelector(SECTIONS[currentSection + 1]).classList.contains('active')) {
+            currentSection++;
+
+            moveToTargetBlock(SECTIONS[currentSection]);
+          }
+        }
+      } else if (e.direction === 'up') {
+        if (currentSection > 0) {
+          currentSection--;
+
+          moveToTargetBlock(SECTIONS[currentSection]);
+        }
+      }
+    }
+  });
 
   document.addEventListener('click', e => {
     if (e.target.classList.contains('js-nav')) {
@@ -47,6 +75,9 @@ function navigation() {
 
       if (!e.target.classList.contains('answer-advise__another')) {
         setActiveBlock(e.target.dataset.nav);
+        currentSection++;
+      } else {
+        currentSection = 1;
       }
 
       setTimeout(() => {
@@ -71,5 +102,9 @@ function navigation() {
         fillText(selectedHero.advise.hero, advise, true, readable);
       }
     }
+  });
+
+  document.addEventListener('scroll', e => {
+    console.log(e);
   });
 }
