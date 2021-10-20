@@ -52,6 +52,18 @@ function navigation() {
     }
   });
 
+  document.querySelectorAll('.js-scrollable').forEach(item => {
+    item.addEventListener('mouseleave', () => {
+      if (item.classList.contains('question-story__item-text')) {
+        currentSection = 2;
+      }
+
+      if (item.classList.contains('answer-story__item-text') || item.classList.contains('answer-advise__text')) {
+        currentSection = 3;
+      }
+    });
+  });
+
   document.addEventListener('click', e => {
     if (e.target.classList.contains('js-nav')) {
       if (e.target.tagName.toLowerCase() === 'a') {

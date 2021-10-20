@@ -94,25 +94,23 @@ function quiz() {
           throw new Error('Network status is not 200');
         }
 
-        return response;
+        return response.json();
       })
       .then(data => {
-        const result = JSON.parse(data);
-
-        if (result.error_no === 0) {
+        if (data.error_no === 0) {
 
           setTimeout(() => {
             modalLoader.style.display = 'none';
             modalAfter.style.display = 'block';
           }, 2000);
 
-        } else if (result.error_no > 0) {
+        } else if (data.error_no > 0) {
 
           setTimeout(() => {
             modalLoader.style.display = 'none';
             modalRegistration.style.display = 'block';
 
-            modalError.textContent = result.error_text;
+            modalError.textContent = data.error_text;
             modalError.style.display = 'block';
           }, 2000);
 
