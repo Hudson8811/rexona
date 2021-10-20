@@ -15,8 +15,8 @@
 
     @include max("md") {
       text-align: center;
-      font-size: vws(45);
-      line-height: vws(48);
+      font-size: vws(42);
+      line-height: vws(45);
     }
 
     &--stroked {

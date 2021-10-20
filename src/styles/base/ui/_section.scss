@@ -4,7 +4,7 @@
   height: 100vh;
 
   @include max("md") {
-    min-height: 100vh;
+    // min-height: 100vh;
     height: auto;
   }
 

@@ -1,11 +1,14 @@
 /* eslint-disable max-len */
+
+const maxTextLength = 170;
+
 function fillText(text, elem, story = false, readable = false) {
   if (!story) {
     elem.textContent = text;
   } else {
-    if (text.length > 170) {
-      const begining = text.substring(0, 170),
-        ending = text.substring(170);
+    if (text.length > maxTextLength) {
+      const begining = text.substring(0, maxTextLength),
+        ending = text.substring(maxTextLength);
 
       elem.querySelector('p').innerHTML = `<span class="story-item__text">${begining}</span><span class="story-item__dots">...</span><span class="story-item__hidden">${ending}</span>`;
 

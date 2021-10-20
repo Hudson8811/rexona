@@ -151,13 +151,13 @@
     &__item {
       font-family: $openSans;
       font-weight: 600;
-      font-size: vwx(36);
-      line-height: vwx(38);
+      font-size: vwx(24);
+      line-height: vwx(32);
       letter-spacing: 0.05em;
 
       @include max("lg") {
-        font-size: vw(22);
-        line-height: vw(24);
+        font-size: vw(17);
+        line-height: vw(22);
       }
 
       @include max("md") {

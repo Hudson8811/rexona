@@ -107,13 +107,13 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        width: vwx(547);
-        height: vwx(555);
+        width: vwx(500);
+        height: vwx(507);
         border-radius: 50%;
 
         @include max("lg") {
-          width: vw(360);
-          height: vw(365);
+          width: vw(320);
+          height: vw(325);
         }
 
         @include max("md") {
@@ -141,14 +141,14 @@
         }
 
         &-item {
-          width: vwx(480);
-          height: vwx(480);
+          width: vwx(420);
+          height: vwx(420);
           border-radius: 50%;
           overflow: hidden;
 
           @include max("lg") {
-            width: vw(320);
-            height: vw(320);
+            width: vw(282);
+            height: vw(282);
           }
 
           @include max("md") {
@@ -172,9 +172,11 @@
       &-info {
         display: flex;
         flex-direction: column;
+        max-width: vwx(680);
         padding-left: vwx(187);
 
         @include max("md") {
+          max-width: none;
           padding-left: 0;
         }
       }
@@ -189,13 +191,13 @@
       margin: 0 auto;
       font-family: $openSans;
       font-weight: 600;
-      font-size: vwx(36);
-      line-height: vwx(38);
+      font-size: vwx(24);
+      line-height: vwx(32);
       letter-spacing: 0.05em;
 
       @include max("lg") {
-        font-size: vw(22);
-        line-height: vw(24);
+        font-size: vw(17);
+        line-height: vw(22);
       }
 
       @include max("md") {
@@ -264,7 +266,11 @@
     position: relative;
     z-index: 0;
     height: 100%;
-    padding: vwx(118) 0 vwx(172);
+    padding: vwx(48) 0 vwx(142);
+
+    @include max("lg") {
+      padding: vw(20) 0 vw(30);
+    }
 
     @include max("md") {
       padding: vws(13) vws(20) vws(90);
@@ -358,7 +364,11 @@
 
     &__switch {
       width: vwx(392);
-      margin: 0 vwx(292) vwx(94) vwx(266);
+      margin: 0 vwx(292) vwx(44) vwx(266);
+
+      @include max("lg") {
+        margin-bottom: vw(30);
+      }
 
       @include max("md") {
         margin: 0 auto vws(24);
@@ -372,8 +382,12 @@
 
     &__info {
       &.readable {
-        height: 50vh;
+        height: 65vh;
         overflow-y: auto;
+
+        @include max("md") {
+          height: auto;
+        }
 
         .story-item {
           &__dots {
@@ -391,14 +405,14 @@
       margin: 0 vwx(104) 0 vwx(339);
       font-family: $openSans;
       font-weight: 600;
-      font-size: vwx(36);
-      line-height: vwx(38);
+      font-size: vwx(24);
+      line-height: vwx(32);
       letter-spacing: 0.05em;
       color: $darkBlue;
 
       @include max("lg") {
-        font-size: vw(22);
-        line-height: vw(24);
+        font-size: vw(17);
+        line-height: vw(22);
       }
 
       @include max("md") {
@@ -434,6 +448,7 @@
 
         @include max("md") {
           margin: vw(24) 0 0 auto;
+          max-width: vws(219);
           font-size: vws(12);
           line-height: vws(15);
         }

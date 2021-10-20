@@ -24,6 +24,7 @@ function navigation() {
 
   const indicator = new WheelIndicator({
     elem: document.querySelector('.main'),
+    // preventMouse: true,
     callback: function(e) {
       if (e.direction === 'down') {
         if (currentSection < SECTIONS.length - 1) {
@@ -40,6 +41,14 @@ function navigation() {
           moveToTargetBlock(SECTIONS[currentSection]);
         }
       }
+    }
+  });
+
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest('.js-scrollable')) {
+      indicator._options.preventMouse = false;
+    } else {
+      indicator._options.preventMouse = true;
     }
   });
 
