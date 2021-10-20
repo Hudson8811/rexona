@@ -1,5 +1,7 @@
 html {
-  overflow: hidden;
+  @include min("md") {
+    overflow: hidden;
+  }
 }
 
 body {

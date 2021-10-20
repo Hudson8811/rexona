@@ -28,7 +28,9 @@
 
       .question-story {
         &__person {
-          display: none;
+          &-image {
+            display: none;
+          }
         }
 
         &__item {
