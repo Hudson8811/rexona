@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 body {
   font-family: $openSans;
   font-style: normal;
@@ -10,7 +14,15 @@ body {
   max-width: 100%;
 }
 
+.main {
+  scrollbar-width: none;
+}
+
 ::-webkit-scrollbar {
+  display: none;
+}
+
+::-moz-scrollbar {
   display: none;
 }
 
