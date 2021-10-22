@@ -1,14 +1,23 @@
 .section {
-  display: none;
   width: 100vw;
-  height: 100vh;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
+  transition-delay: 0.4s;
 
   @include max("md") {
-    // min-height: 100vh;
+    display: none;
     height: auto;
   }
 
   &.active {
-    display: block;
+    opacity: 1;
+    height: 100vh;
+
+    @include max("md") {
+      display: block;
+      height: auto;
+    }
   }
 }

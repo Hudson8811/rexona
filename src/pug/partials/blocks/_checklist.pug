@@ -3,7 +3,7 @@ section.section.checklist.active#checklist
     p.checklist-text__item
       | Если Rexona может позаботиться о том, чтобы неловкие ситуации не возникали по вине пота, то как быть с остальными? Как завести привычку не терять самообладание? 
 
-  h2.gradient-text.checklist__title
+  h2.gradient-text.checklist__title(data-aos="fade-left")
     | Смотрите чек-лист от&nbsp;экспертов бренда!
 
   .checklist-wrapper
@@ -19,8 +19,8 @@ section.section.checklist.active#checklist
         'Чувство юмора и сдержанность в суждениях - ваши лучшие друзья. Не рубите с плеча и не принимайте кардинальных решений.',
       ];
     
-    each item in items
-      label.checklist-item
+    each item, index in items
+      label.checklist-item(data-aos="zoom-out" data-aos-once="true" data-aos-delay=`${index / 2}00`)
         input(type="checkbox").checklist-item__input
         span.checklist-item__checkmark
         span.checklist-item__text= item

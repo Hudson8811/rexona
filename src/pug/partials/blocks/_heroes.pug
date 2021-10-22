@@ -1,7 +1,7 @@
 section.section.heroes.active#heroes
   .heroes-wrapper
     .heroes-heading.heroes__heading
-      h2.title.stroked-text.heroes-heading__title
+      h2.title.stroked-text.heroes-heading__title(data-aos="fade-right")
         | выберите героиню
     
     .heroes-list.heroes__list
@@ -13,8 +13,8 @@ section.section.heroes.active#heroes
             { img: 'hero-4.png', quote: 'История про ремонт моей студии очень показательная.', name: 'Ольга Панасенкова', position: 'основательница и руководитель нейл-студии Ananasnails, топ-мастер маникюра', target: '4' },
             { img: 'hero-5.png', quote: 'машина начинает скатываться с горы задом в этот обрыв', name: 'анна захарова', position: 'актриса театра и кино, хореограф', target: '5' },
           ];
-      each hero in heroes
-        .heroes-item.heroes-list__item
+      each hero, index in heroes
+        .heroes-item.heroes-list__item(data-aos="fade-down-left" data-aos-once="true" data-aos-delay=`${index / 2}00`)
           input(type="radio", name="hero", data-nav="#question", data-target= hero.target).js-nav
           
           span.heroes-item__checkmark
