@@ -29,7 +29,7 @@ function quiz() {
     resultTitle = quiz.querySelector('.quiz-reg__title'),
     resultText = quiz.querySelector('.quiz-reg__text'),
     answers = [],
-    modal = document.querySelector('.quiz-reg__modal'),
+    modal = document.querySelector('.quiz-modal'),
     modalRegistration = modal.querySelector('.quiz-modal__first'),
     modalLoader = modal.querySelector('.quiz-modal__loader'),
     modalAfter = modal.querySelector('.quiz-modal__after'),
@@ -39,7 +39,7 @@ function quiz() {
   let activeSection = 0;
 
   quiz.addEventListener('click', e => {
-    if (e.target.classList.contains('quiz-index__button-item')) {
+    if (e.target.classList.contains('js-quiz-nav')) {
       e.preventDefault();
 
       activeSection++;
@@ -65,6 +65,13 @@ function quiz() {
     if (e.target.classList.contains('quiz-reg__cta-button')) {
       e.preventDefault();
 
+      modal.classList.add('active');
+    }
+
+    if (e.target.classList.contains('js-quiz-reg')) {
+      e.preventDefault();
+
+      result.value = 0;
       modal.classList.add('active');
     }
 

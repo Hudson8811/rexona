@@ -229,19 +229,44 @@
       }
     }
 
-    &__button {
-      max-width: vwx(702);
+    &__buttons {
+      display: flex;
+      align-items: center;
+      width: vwx(702);
       margin-left: auto;
 
       @include max("md") {
-        max-width: none;
-        margin-left: 0;
-        text-align: center;
+        width: 100%;
+        margin-left: vws(86);
+      }
+
+      @include max("sm") {
+        flex-wrap: wrap;
       }
 
       &-item {
+        &:first-child {
+          margin-right: vwx(30);
+
+          @include max("sm") {
+            margin-right: 0;
+            margin-bottom: vws(20);
+          }
+        }
+
+        &:nth-child(2) {
+          border: vwx(3) solid $white;
+          color: $white;
+          background-color: transparent;
+
+          @include hover {
+            border-color: $blue;
+            background-color: $blue;
+          }
+        }
+
         @include max("md") {
-          min-width: vws(188);
+          min-width: vws(150);
         }
 
         @include max("sm") {
