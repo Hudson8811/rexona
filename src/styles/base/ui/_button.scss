@@ -1,9 +1,9 @@
 .button {
   display: inline-block;
-  padding: vwx(26) vwx(56);
+  padding: vwx(23) vwx(50);
   font-weight: 700;
-  font-size: vwx(24);
-  line-height: vwx(36);
+  font-size: vwx(22);
+  line-height: vwx(32);
   text-transform: uppercase;
   text-align: center;
   border-radius: vwx(50);
@@ -18,10 +18,10 @@
   }
 
   @include max("lg") {
-    padding: vw(20) vw(50);
+    padding: vw(28) vw(45);
     border-radius: vw(50);
-    font-size: vw(18);
-    line-height: vw(24);
+    font-size: vw(16);
+    line-height: vw(22);
   }
 
   @include max("md") {

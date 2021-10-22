@@ -1,8 +1,8 @@
 .checklist {
-  padding: vwx(74) vwx(30) vwx(36);
+  padding: vwx(67) vwx(27) vwx(32);
 
   @include max("lg") {
-    padding-top: vw(36);
+    padding-top: vw(32);
   }
 
   @include max("md") {
@@ -11,17 +11,17 @@
 
   &-text {
     position: relative;
-    padding: vwx(49) vwx(102) vwx(32) vwx(153);
+    padding: vwx(44) vwx(92) vwx(29) vwx(138);
     font-family: $roboto;
     font-weight: 500;
-    font-size: vwx(48);
-    line-height: vwx(52);
+    font-size: vwx(43);
+    line-height: vwx(47);
     letter-spacing: 0.05em;
     color: $darkBlue;
 
     @include max("lg") {
-      font-size: vw(30);
-      line-height: vw(34);
+      font-size: vw(27);
+      line-height: vw(31);
     }
 
     @include max("md") {
@@ -61,7 +61,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: vwx(1546);
+    max-width: vwx(1391);
     margin: 0 auto;
 
     @include max("sm") {
@@ -75,12 +75,12 @@
     display: flex;
     align-items: center;
     flex-basis: 49%;
-    margin-bottom: vwx(20);
-    padding-left: vwx(133);
+    margin-bottom: vwx(18);
+    padding-left: vwx(90);
     font-family: $openSans;
     font-weight: 400;
-    font-size: vwx(21);
-    line-height: vwx(28);
+    font-size: vwx(19);
+    line-height: vwx(25);
     letter-spacing: 0.05em;
     color: $darkBlue;
     user-select: none;
@@ -125,8 +125,8 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      width: vwx(70);
-      height: vwx(70);
+      width: vwx(63);
+      height: vwx(63);
       border-radius: 50%;
       border: vwx(7) solid $blue;
 
@@ -143,10 +143,10 @@
       &::after {
         content: "";
         position: absolute;
-        top: vwx(-22);
+        top: vwx(-20);
         left: 0;
-        width: vwx(64);
-        height: vwx(81);
+        width: vwx(58);
+        height: vwx(73);
         background: url("../images/checkmark-dark.svg") no-repeat;
         background-size: contain;
         opacity: 0;
@@ -170,19 +170,19 @@
   }
 
   &__title {
-    max-width: vwx(900);
+    max-width: vwx(810);
     margin: vwx(32) auto;
     font-family: $averta;
     font-weight: 800;
-    font-size: vwx(64);
-    line-height: vwx(64);
+    font-size: vwx(58);
+    line-height: vwx(58);
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 
     @include max("lg") {
-      font-size: vw(40);
-      line-height: vw(40);
+      font-size: vw(36);
+      line-height: vw(36);
     }
 
     @include max("md") {

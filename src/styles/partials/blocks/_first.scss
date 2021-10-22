@@ -66,7 +66,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: vwx(44) vwx(42) vwx(32) vwx(188);
+    padding: vwx(40) vwx(38) vwx(29) vwx(169);
 
     @include max("md") {
       height: 100vh;
@@ -88,12 +88,12 @@
     }
 
     &__logo {
-      width: vwx(87);
-      height: vwx(108);
+      width: vwx(78);
+      height: vwx(97);
 
       @include max("lg") {
-        width: vw(50);
-        height: vw(62);
+        width: vw(45);
+        height: vw(56);
       }
 
       @include max("md") {
@@ -113,12 +113,12 @@
     }
 
     &__woman {
-      width: vwx(200);
-      height: vwx(45);
+      width: vwx(180);
+      height: vwx(41);
 
       @include max("lg") {
-        width: vw(120);
-        height: vw(27);
+        width: vw(108);
+        height: vw(24);
       }
 
       @include max("md") {
@@ -142,20 +142,20 @@
   &-content {
     &__title {
       position: relative;
-      margin-bottom: vwx(42);
-      max-width: vwx(914);
+      margin-bottom: vwx(38);
+      max-width: vwx(823);
       font-family: $averta;
       font-weight: 800;
-      font-size: vwx(112);
-      line-height: vwx(112);
+      font-size: vwx(101);
+      line-height: vwx(101);
       letter-spacing: 0.1em;
       text-transform: uppercase;
 
       @include max("lg") {
-        margin-bottom: vw(32);
-        max-width: vw(510);
-        font-size: vw(64);
-        line-height: vw(64);
+        margin-bottom: vw(29);
+        max-width: vw(459);
+        font-size: vw(58);
+        line-height: vw(58);
       }
 
       @include max("md") {
@@ -167,12 +167,12 @@
       }
 
       &--large {
-        font-size: vwx(165);
-        line-height: vwx(165);
+        font-size: vwx(149);
+        line-height: vwx(149);
 
         @include max("lg") {
-          font-size: vw(95);
-          line-height: vw(95);
+          font-size: vw(86);
+          line-height: vw(86);
         }
 
         @include max("md") {
@@ -186,17 +186,17 @@
           content: "";
           position: absolute;
           top: vwx(2);
-          left: vwx(285);
-          width: vwx(111);
-          height: vwx(114);
+          left: vwx(257);
+          width: vwx(100);
+          height: vwx(103);
           background: url("../images/circles.png") no-repeat;
           background-size: cover;
 
           @include max("lg") {
             top: vw(2);
-            left: vw(163);
-            width: vw(62);
-            height: vw(64);
+            left: vw(147);
+            width: vw(56);
+            height: vw(58);
           }
 
           @include max("md") {
@@ -210,18 +210,18 @@
     }
 
     &__text {
-      margin-bottom: vwx(42);
-      max-width: vwx(800);
+      margin-bottom: vwx(38);
+      max-width: vwx(720);
       font-weight: 700;
-      font-size: vwx(26);
-      line-height: vwx(36);
+      font-size: vwx(23);
+      line-height: vwx(32);
       letter-spacing: 0.05em;
 
       @include max("lg") {
-        margin-bottom: vw(32);
-        max-width: vw(510);
-        font-size: vw(18);
-        line-height: vw(26);
+        margin-bottom: vw(29);
+        max-width: vw(459);
+        font-size: vw(16);
+        line-height: vw(23);
       }
 
       @include max("md") {
@@ -253,12 +253,12 @@
     justify-content: space-between;
 
     &__rexona {
-      width: vwx(229);
-      height: vwx(60);
+      width: vwx(206);
+      height: vwx(54);
 
       @include max("lg") {
-        width: vw(135);
-        height: vw(35);
+        width: vw(122);
+        height: vw(32);
       }
 
       @include max("md") {
@@ -286,15 +286,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: vwx(42);
-      height: vwx(42);
+      width: vwx(38);
+      height: vwx(38);
       border: 1px solid $white;
       border-radius: 50%;
       background-color: transparent;
       transition: $transition;
 
       &:not(:last-child) {
-        margin-right: vwx(10);
+        margin-right: vwx(9);
       }
 
       @include hover {
@@ -331,8 +331,8 @@
       }
 
       &--facebook {
-        width: vwx(11);
-        height: vwx(18);
+        width: vwx(10);
+        height: vwx(16);
 
         @include max("md") {
           width: vws(7);
@@ -341,8 +341,8 @@
       }
 
       &--ok {
-        width: vwx(11);
-        height: vwx(15);
+        width: vwx(10);
+        height: vwx(14);
 
         @include max("md") {
           width: vws(7);
@@ -351,8 +351,8 @@
       }
 
       &--twitter {
-        width: vwx(17);
-        height: vwx(13);
+        width: vwx(15);
+        height: vwx(12);
 
         @include max("md") {
           width: vws(12);

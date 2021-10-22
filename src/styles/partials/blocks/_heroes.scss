@@ -4,11 +4,11 @@
   overflow-y: auto;
 
   &-wrapper {
-    padding: vwx(56) vwx(21) vwx(126) vwx(44);
+    padding: vwx(50) vwx(19) vwx(113) vwx(40);
 
     @include max("lg") {
       height: 100%;
-      padding-bottom: vw(36);
+      padding-bottom: vw(32);
     }
 
     @include max("md") {
@@ -26,7 +26,7 @@
     justify-content: center;
 
     &__item {
-      margin-bottom: vwx(29);
+      margin-bottom: vwx(26);
 
       @include max("md") {
         margin-bottom: vws(29);
@@ -37,7 +37,7 @@
       }
 
       &:nth-child(4) {
-        margin-right: vwx(62);
+        margin-right: vwx(56);
 
         @include max("md") {
           margin-right: 0;
@@ -106,15 +106,15 @@
     &__checkmark {
       position: absolute;
       z-index: 2;
-      top: vwx(180);
-      left: vwx(260);
+      top: vwx(162);
+      left: vwx(234);
       opacity: 0;
       visibility: hidden;
       transition: $transition;
 
       @include max("lg") {
-        top: vw(120);
-        left: vw(160);
+        top: vw(108);
+        left: vw(144);
       }
 
       @include max("md") {
@@ -128,8 +128,8 @@
       }
 
       svg {
-        width: vwx(58);
-        height: vwx(72);
+        width: vwx(52);
+        height: vwx(65);
 
         @include max("sm") {
           width: vws(40);
@@ -144,13 +144,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: vwx(6);
-      width: vwx(313);
-      height: vwx(316);
+      margin-right: vwx(5);
+      width: vwx(282);
+      height: vwx(284);
 
       @include max("lg") {
-        width: vw(200);
-        height: vw(202);
+        width: vw(180);
+        height: vw(182);
       }
 
       @include max("md") {
@@ -176,14 +176,14 @@
       }
 
       &-item {
-        width: vwx(249);
-        height: vwx(249);
+        width: vwx(224);
+        height: vwx(224);
         border-radius: 50%;
         overflow: hidden;
 
         @include max("lg") {
-          width: vw(160);
-          height: vw(160);
+          width: vw(144);
+          height: vw(144);
         }
 
         @include max("md") {
@@ -205,11 +205,11 @@
     }
 
     &__info {
-      max-width: vwx(288);
+      max-width: vwx(259);
       text-transform: uppercase;
 
       @include max("lg") {
-        max-width: vw(250);
+        max-width: vw(225);
       }
 
       @include max("md") {
@@ -217,16 +217,16 @@
       }
 
       &-quote {
-        margin-bottom: vwx(28);
+        margin-bottom: vwx(25);
         font-family: $averta;
         font-weight: 800;
-        font-size: vwx(24);
-        line-height: vwx(28);
+        font-size: vwx(22);
+        line-height: vwx(25);
         letter-spacing: 0.1em;
 
         @include max("lg") {
-          font-size: vw(16);
-          line-height: vw(19);
+          font-size: vw(14);
+          line-height: vw(17);
         }
 
         @include max("md") {
@@ -246,13 +246,13 @@
         flex-direction: column;
         font-family: $openSans;
         font-weight: 300;
-        font-size: vwx(18);
-        line-height: vwx(21);
+        font-size: vwx(16);
+        line-height: vwx(19);
         letter-spacing: 0.05em;
 
         @include max("lg") {
-          font-size: vw(14);
-          line-height: vw(16);
+          font-size: vw(13);
+          line-height: vw(14);
         }
 
         @include max("md") {
@@ -273,10 +273,10 @@
   }
 
   &__heading {
-    margin-bottom: vwx(104);
+    margin-bottom: vwx(94);
 
     @include max("lg") {
-      margin-bottom: vw(64);
+      margin-bottom: vw(58);
     }
 
     @include max("sm") {

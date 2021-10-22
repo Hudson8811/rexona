@@ -4,18 +4,18 @@
 
   // Основные элементы секции
   &-title {
-    font-size: vwx(144);
-    line-height: vwx(144);
+    font-size: vwx(130);
+    line-height: vwx(130);
     letter-spacing: normal;
 
     @include max("lg") {
-      font-size: vw(95);
-      line-height: vw(95);
+      font-size: vw(86);
+      line-height: vw(86);
     }
 
     @include max("md") {
       text-align: center;
-      font-size: vws(42);
+      font-size: vws(45);
       line-height: vws(45);
     }
 
@@ -36,13 +36,13 @@
 
   &-text {
     font-weight: 700;
-    font-size: vwx(26);
-    line-height: vwx(36);
+    font-size: vwx(23);
+    line-height: vwx(32);
     letter-spacing: 0.05em;
 
     @include max("lg") {
-      font-size: vw(18);
-      line-height: vw(24);
+      font-size: vw(16);
+      line-height: vw(22);
     }
 
     @include max("md") {
@@ -58,7 +58,7 @@
 
   &-button {
     display: inline-block;
-    min-width: vwx(354);
+    min-width: vwx(319);
 
     @include max("md") {
       max-width: vws(147);
@@ -106,8 +106,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    min-height: vwx(70);
-    padding-left: vwx(133);
+    min-height: vwx(63);
+    padding-left: vwx(100);
     user-select: none;
     cursor: pointer;
 
@@ -141,10 +141,10 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      width: vwx(70);
-      height: vwx(70);
+      width: vwx(63);
+      height: vwx(63);
       border-radius: 50%;
-      border: vwx(13) solid $white;
+      border: vwx(12) solid $white;
 
       @include max("md") {
         width: vws(25);
@@ -161,10 +161,10 @@
       &::after {
         content: "";
         position: absolute;
-        top: vwx(-36);
+        top: vwx(-32);
         left: 0;
-        width: vwx(64);
-        height: vwx(81);
+        width: vwx(58);
+        height: vwx(73);
         background: url("../images/checkmark-dark.svg") no-repeat;
         background-size: contain;
         opacity: 0;
@@ -194,11 +194,11 @@
 
   // Элементы секции в конкретном блоке
   &-index {
-    padding: vwx(220) vwx(323) vwx(185) vwx(187);
+    padding: vwx(198) vwx(291) vwx(167) vwx(168);
 
     @include max("lg") {
-      padding-top: vwx(117);
-      padding-bottom: vwx(117);
+      padding-top: vwx(105);
+      padding-bottom: vwx(105);
     }
 
     @include max("md") {
@@ -210,7 +210,7 @@
     }
 
     &__title {
-      margin-bottom: vwx(78);
+      margin-bottom: vwx(70);
 
       @include max("md") {
         margin-bottom: vws(37);
@@ -218,8 +218,8 @@
     }
 
     &__text {
-      max-width: vwx(780);
-      margin-bottom: vwx(38);
+      max-width: vwx(702);
+      margin-bottom: vwx(34);
       margin-left: auto;
 
       @include max("md") {
@@ -230,7 +230,7 @@
     }
 
     &__button {
-      max-width: vwx(780);
+      max-width: vwx(702);
       margin-left: auto;
 
       @include max("md") {
@@ -253,7 +253,7 @@
 
   &-item {
     // position: relative;
-    padding: vwx(130) vwx(187);
+    padding: vwx(117) vwx(168);
 
     @include max("md") {
       padding: vws(63) vws(20);
@@ -261,8 +261,8 @@
 
     &__position {
       position: absolute;
-      bottom: vwx(130);
-      left: vwx(187);
+      bottom: vwx(117);
+      left: vwx(168);
 
       @include max("md") {
         bottom: vws(20);
@@ -271,9 +271,9 @@
     }
 
     &__title {
-      max-width: vwx(1096);
+      max-width: vwx(986);
       margin-right: auto;
-      margin-bottom: vwx(85);
+      margin-bottom: vwx(77);
 
       @include max("md") {
         max-width: none;
@@ -284,16 +284,16 @@
     }
 
     &__answers {
-      max-width: vwx(920);
+      width: vwx(828);
       margin-left: auto;
 
       @include max("md") {
-        max-width: none;
+        width: auto;
         margin-left: 0;
       }
 
       &-item {
-        margin-bottom: vwx(44);
+        margin-bottom: vwx(40);
 
         @include max("md") {
           margin-bottom: vws(22);
@@ -304,7 +304,7 @@
 
   &-reg {
     // position: relative;
-    padding: vwx(192) vwx(187) vwx(222);
+    padding: vwx(173) vwx(168) vwx(200);
 
     @include max("md") {
       padding: vws(63) vws(20) vws(92);
@@ -312,13 +312,13 @@
 
     &__bg {
       position: absolute;
-      right: vwx(-363);
+      right: vwx(-327);
       bottom: 0;
       z-index: 0;
-      width: vwx(1000);
+      width: vwx(900);
 
       @include max("lg") {
-        width: vw(650);
+        width: vw(585);
       }
 
       @include max("md") {
@@ -338,9 +338,9 @@
     }
 
     &__title {
-      max-width: vwx(1244);
+      max-width: vwx(1120);
       margin-right: auto;
-      margin-bottom: vwx(36);
+      margin-bottom: vwx(32);
       letter-spacing: normal;
       text-align: left;
 
@@ -352,10 +352,10 @@
     }
 
     &__text {
-      max-width: vwx(784);
+      max-width: vwx(706);
       margin-right: auto;
-      margin-bottom: vwx(73);
-      margin-left: vwx(148);
+      margin-bottom: vwx(66);
+      margin-left: vwx(133);
 
       @include max("md") {
         max-width: none;
@@ -371,7 +371,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: vwx(1096);
+      max-width: vwx(986);
       margin-right: auto;
 
       @include max("md") {
@@ -383,8 +383,8 @@
       &-text {
         font-family: $averta;
         font-weight: 900;
-        font-size: vwx(48);
-        line-height: vwx(48);
+        font-size: vwx(43);
+        line-height: vwx(43);
         text-transform: uppercase;
         color: $darkBlue;
 
@@ -448,13 +448,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: vwx(1234);
-      padding: vwx(50) vwx(58) vwx(105) vwx(64);
+      width: vwx(1111);
+      padding: vwx(45) vwx(52) vwx(95) vwx(58);
       background: $gradient;
       border: vwx(10) solid $white;
 
       @include max("lg") {
-        border-width: vw(10);
+        border-width: vw(9);
       }
 
       @include max("md") {
@@ -472,8 +472,8 @@
 
     &__close {
       position: absolute;
-      top: vwx(15);
-      right: vwx(18);
+      top: vwx(14);
+      right: vwx(16);
       display: none;
       cursor: pointer;
 
@@ -487,8 +487,8 @@
       }
 
       svg {
-        width: vwx(92);
-        height: vwx(92);
+        width: vwx(83);
+        height: vwx(83);
         pointer-events: none;
         transition: $transition;
 
@@ -505,7 +505,7 @@
     }
 
     &__title {
-      margin-bottom: vwx(57);
+      margin-bottom: vwx(51);
       text-align: center;
 
       @include max("md") {
@@ -524,8 +524,8 @@
       width: 100%;
 
       &-group {
-        flex-basis: vwx(533);
-        margin-bottom: vwx(26);
+        flex-basis: vwx(480);
+        margin-bottom: vwx(23);
 
         &:last-child {
           flex-basis: 100%;
@@ -539,11 +539,11 @@
 
       &-item {
         width: 100%;
-        padding: vwx(20) vwx(38);
+        padding: vwx(18) vwx(34);
         border: vwx(4) solid $white;
         font-weight: 700;
-        font-size: vwx(24);
-        line-height: vwx(36);
+        font-size: vwx(22);
+        line-height: vwx(32);
         text-transform: uppercase;
         color: $darkBlue;
         background-color: transparent;
@@ -564,8 +564,8 @@
         &::placeholder {
           font-family: $openSans;
           font-weight: 700;
-          font-size: vwx(24);
-          line-height: vwx(36);
+          font-size: vwx(22);
+          line-height: vwx(32);
           text-transform: uppercase;
           color: $cerulean;
 
@@ -596,7 +596,7 @@
       &-checkboxes {
         display: flex;
         flex-direction: column;
-        flex-basis: vwx(533);
+        flex-basis: vwx(480);
 
         @include max("md") {
           flex-basis: 100%;
@@ -615,13 +615,13 @@
       position: relative;
       display: flex;
       align-items: center;
-      margin-bottom: vwx(10);
-      min-height: vwx(30);
-      padding-left: vwx(63);
+      margin-bottom: vwx(9);
+      min-height: vwx(28);
+      padding-left: vwx(57);
       font-family: $roboto;
       font-weight: 500;
-      font-size: vwx(18);
-      line-height: vwx(21);
+      font-size: vwx(16);
+      line-height: vwx(19);
       letter-spacing: 0.05em;
       user-select: none;
       cursor: pointer;
@@ -654,8 +654,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: vwx(30);
-        height: vwx(30);
+        width: vwx(27);
+        height: vwx(27);
         border: vwx(4) solid $white;
 
         @include max("md") {
@@ -667,10 +667,10 @@
         &::after {
           content: "";
           position: absolute;
-          top: vwx(-10);
-          left: vwx(10);
-          width: vwx(15);
-          height: vwx(27);
+          top: vwx(-9);
+          left: vwx(9);
+          width: vwx(14);
+          height: vwx(24);
           border: solid $cerulean;
           border-width: 0 vwx(6) vwx(6) 0;
           -webkit-transform: rotate(45deg);
@@ -691,17 +691,17 @@
     }
 
     &__text {
-      margin-bottom: vwx(83);
-      max-width: vwx(665);
+      margin-bottom: vwx(75);
+      max-width: vwx(699);
       font-weight: 600;
-      font-size: vwx(36);
-      line-height: vwx(42);
+      font-size: vwx(32);
+      line-height: vwx(38);
       letter-spacing: 0.05em;
       text-align: center;
 
       @include max("lg") {
-        font-size: vw(22);
-        line-height: vw(24);
+        font-size: vw(20);
+        line-height: vw(22);
       }
 
       @include max("md") {
@@ -768,15 +768,15 @@
 
     &__error {
       display: none;
-      margin-top: vwx(15);
+      margin-top: vwx(13);
       font-family: $roboto;
       font-weight: 500;
-      font-size: vwx(16);
+      font-size: vwx(14);
       color: red;
 
       @include max("lg") {
-        margin-top: vw(15);
-        font-size: vw(16);
+        margin-top: vw(13);
+        font-size: vw(14);
       }
 
       @include max("md") {

@@ -2,11 +2,11 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  height: vwx(93);
+  height: vwx(84);
   font-family: $openSans;
   font-weight: 600;
-  font-size: vwx(36);
-  line-height: vwx(36);
+  font-size: vwx(32);
+  line-height: vwx(32);
   text-transform: uppercase;
   border-radius: vwx(50);
   color: $white;
@@ -14,8 +14,8 @@
   overflow: hidden;
 
   @include max("lg") {
-    font-size: vw(22);
-    line-height: vw(22);
+    font-size: vw(20);
+    line-height: vw(20);
   }
 
   @include max("md") {
@@ -59,7 +59,7 @@
     justify-content: space-between;
     width: 172%;
     height: 100%;
-    padding: 0 vwx(78);
+    padding: 0 vwx(70);
     transition: $transition;
 
     &-item {
@@ -67,8 +67,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: vwx(86);
-      height: vwx(86);
+      width: vwx(77);
+      height: vwx(77);
       border-radius: 50%;
       background: radial-gradient(
         65.4% 65.4% at 50.04% 50.01%,

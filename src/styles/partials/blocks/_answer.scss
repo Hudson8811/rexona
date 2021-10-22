@@ -14,7 +14,7 @@
   }
 
   &-story {
-    padding: 0 0 vwx(76);
+    padding: 0 0 vwx(68);
 
     @include max("lg") {
       height: 100%;
@@ -46,16 +46,6 @@
         }
 
         &__item {
-          // &-text {
-          //   &--dots {
-          //     display: none;
-          //   }
-
-          //   &--hidden {
-          //     display: inline;
-          //   }
-          // }
-
           &-more {
             opacity: 0;
             visibility: hidden;
@@ -75,19 +65,19 @@
     }
 
     &__person {
-      margin-bottom: vwx(13);
+      margin-bottom: vwx(12);
       font-family: $openSans;
       font-weight: 300;
-      font-size: vwx(21);
-      line-height: vwx(24);
+      font-size: vwx(19);
+      line-height: vwx(22);
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: $white;
 
       @include max("lg") {
-        margin-bottom: vw(13);
-        font-size: vw(16);
-        line-height: vw(19);
+        margin-bottom: vw(12);
+        font-size: vw(14);
+        line-height: vw(17);
       }
 
       @include max("md") {
@@ -109,13 +99,13 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        width: vwx(500);
-        height: vwx(507);
+        width: vwx(450);
+        height: vwx(456);
         border-radius: 50%;
 
         @include max("lg") {
-          width: vw(320);
-          height: vw(325);
+          width: vw(288);
+          height: vw(292);
         }
 
         @include max("md") {
@@ -143,14 +133,14 @@
         }
 
         &-item {
-          width: vwx(420);
-          height: vwx(420);
+          width: vwx(378);
+          height: vwx(378);
           border-radius: 50%;
           overflow: hidden;
 
           @include max("lg") {
-            width: vw(282);
-            height: vw(282);
+            width: vw(254);
+            height: vw(254);
           }
 
           @include max("md") {
@@ -174,8 +164,8 @@
       &-info {
         display: flex;
         flex-direction: column;
-        max-width: vwx(680);
-        padding-left: vwx(187);
+        max-width: vwx(612);
+        padding-left: vwx(168);
 
         @include max("md") {
           max-width: none;
@@ -189,17 +179,17 @@
     }
 
     &__item {
-      max-width: vwx(750);
+      max-width: vwx(675);
       margin: 0 auto;
       font-family: $openSans;
       font-weight: 600;
-      font-size: vwx(24);
-      line-height: vwx(32);
+      font-size: vwx(22);
+      line-height: vwx(29);
       letter-spacing: 0.05em;
 
       @include max("lg") {
-        font-size: vw(17);
-        line-height: vw(22);
+        font-size: vw(15);
+        line-height: vw(20);
       }
 
       @include max("md") {
@@ -215,7 +205,7 @@
       }
 
       &-title {
-        margin-bottom: vwx(9);
+        margin-bottom: vwx(8);
 
         @include max("md") {
           margin-bottom: vws(10);
@@ -227,7 +217,7 @@
       }
 
       &-text {
-        max-width: vwx(680);
+        max-width: vwx(612);
         margin-left: auto;
         color: $darkBlue;
 
@@ -242,14 +232,14 @@
 
       &-more {
         display: block;
-        max-width: vwx(680);
+        max-width: vwx(612);
         margin-left: auto;
-        margin-top: vwx(38);
+        margin-top: vwx(34);
         text-transform: uppercase;
         color: $white;
 
         @include max("lg") {
-          margin-top: vw(24);
+          margin-top: vw(22);
         }
 
         @include max("md") {
@@ -268,10 +258,10 @@
     position: relative;
     z-index: 0;
     height: 100%;
-    padding: vwx(48) 0 vwx(142);
+    padding: vwx(43) 0 vwx(129);
 
     @include max("lg") {
-      padding: vw(20) 0 vw(30);
+      padding: vw(18) 0 vw(27);
     }
 
     @include max("md") {
@@ -282,13 +272,13 @@
       position: absolute;
       z-index: 1;
       top: vwx(183);
-      right: vwx(240);
-      width: vwx(868);
-      height: vwx(819);
+      right: vwx(300);
+      width: vwx(781);
+      height: vwx(737);
       pointer-events: none;
 
       @include max("lg") {
-        top: 0;
+        top: vw(100);
       }
 
       @include max("md") {
@@ -320,20 +310,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: vwx(26);
+      padding: vwx(23);
       writing-mode: tb-rl;
       transform: rotate(180deg);
       font-family: $openSans;
       font-weight: 700;
-      font-size: vwx(36);
-      line-height: vwx(36);
+      font-size: vwx(32);
+      line-height: vwx(32);
       text-transform: uppercase;
       color: $white;
       background: $gradient;
 
       @include max("lg") {
-        font-size: vw(22);
-        line-height: vw(22);
+        font-size: vw(20);
+        line-height: vw(20);
       }
 
       @include max("md") {
@@ -356,7 +346,7 @@
     }
 
     &__title {
-      margin: 0 vwx(232) vwx(15) vwx(173);
+      margin: 0 vwx(209) vwx(14) vwx(156);
 
       @include max("md") {
         margin: 0 0 vws(13);
@@ -365,11 +355,11 @@
     }
 
     &__switch {
-      width: vwx(392);
-      margin: 0 vwx(292) vwx(44) vwx(266);
+      width: vwx(353);
+      margin: 0 vwx(263) vwx(40) vwx(239);
 
       @include max("lg") {
-        margin-bottom: vw(30);
+        margin-bottom: vw(27);
       }
 
       @include max("md") {
@@ -404,17 +394,17 @@
     }
 
     &__text {
-      margin: 0 vwx(104) 0 vwx(339);
+      margin: 0 vwx(94) 0 vwx(305);
       font-family: $openSans;
       font-weight: 600;
-      font-size: vwx(24);
-      line-height: vwx(32);
+      font-size: vwx(22);
+      line-height: vwx(29);
       letter-spacing: 0.05em;
       color: $darkBlue;
 
       @include max("lg") {
-        font-size: vw(17);
-        line-height: vw(22);
+        font-size: vw(15);
+        line-height: vw(20);
       }
 
       @include max("md") {
@@ -434,18 +424,18 @@
       }
 
       &-more {
-        margin: vwx(38) vwx(104) 0 vwx(339);
+        margin: vwx(34) vwx(94) 0 vwx(305);
         display: block;
-        font-size: vwx(36);
-        line-height: vwx(38);
+        font-size: vwx(32);
+        line-height: vwx(34);
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: $lightBlue;
 
         @include max("lg") {
-          margin-top: vw(24);
-          font-size: vw(22);
-          line-height: vw(24);
+          margin-top: vw(22);
+          font-size: vw(20);
+          line-height: vw(22);
         }
 
         @include max("md") {

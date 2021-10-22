@@ -1,15 +1,15 @@
 .title {
   font-family: $averta;
   font-weight: 800;
-  font-size: vwx(96);
-  line-height: vwx(96);
+  font-size: vwx(86);
+  line-height: vwx(86);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $darkBlue;
 
   @include max("lg") {
-    font-size: vw(64);
-    line-height: vw(64);
+    font-size: vw(58);
+    line-height: vw(58);
   }
 
   @include max("sm") {

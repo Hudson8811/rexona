@@ -8,7 +8,7 @@
   }
 
   &-story {
-    padding: vwx(40) vwx(92) vwx(40) vwx(187);
+    padding: vwx(36) vwx(83) vwx(36) vwx(168);
 
     @include max("md") {
       padding: vws(30) vws(30) vws(34);
@@ -34,16 +34,6 @@
         }
 
         &__item {
-          // &-text {
-          //   &--dots {
-          //     display: none;
-          //   }
-
-          //   &--hidden {
-          //     display: inline;
-          //   }
-          // }
-
           &-more {
             opacity: 0;
             visibility: hidden;
@@ -63,19 +53,19 @@
     }
 
     &__person {
-      margin-bottom: vwx(13);
+      margin-bottom: vwx(12);
       font-family: $openSans;
       font-weight: 300;
-      font-size: vwx(21);
-      line-height: vwx(24);
+      font-size: vwx(19);
+      line-height: vwx(22);
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: $lightBlue;
 
       @include max("lg") {
-        margin-bottom: vw(13);
-        font-size: vw(16);
-        line-height: vw(19);
+        margin-bottom: vw(12);
+        font-size: vw(14);
+        line-height: vw(17);
       }
 
       @include max("md") {
@@ -94,14 +84,14 @@
         position: relative;
         z-index: 0;
         margin: 0 auto;
-        width: vwx(594);
-        height: vwx(594);
+        width: vwx(535);
+        height: vwx(535);
         border-radius: 50%;
         overflow: hidden;
 
         @include max("lg") {
-          width: vw(350);
-          height: vw(350);
+          width: vw(315);
+          height: vw(315);
         }
 
         @include max("md") {
@@ -126,7 +116,7 @@
           width: 100%;
           height: 100%;
           border-radius: 50%;
-          border: vwx(24) solid $lightBlue;
+          border: vwx(22) solid $lightBlue;
 
           @include max("sm") {
             border-width: vws(10);
@@ -153,13 +143,13 @@
     &__item {
       font-family: $openSans;
       font-weight: 600;
-      font-size: vwx(24);
-      line-height: vwx(32);
+      font-size: vwx(22);
+      line-height: vwx(29);
       letter-spacing: 0.05em;
 
       @include max("lg") {
-        font-size: vw(17);
-        line-height: vw(22);
+        font-size: vw(15);
+        line-height: vw(20);
       }
 
       @include max("md") {
@@ -174,21 +164,16 @@
 
       &-text {
         color: $darkBlue;
-
-        // &--hidden {
-        //   display: none;
-        // }
       }
 
       &-more {
-        // display: inline-block;
         display: none;
-        margin-top: vwx(38);
+        margin-top: vwx(34);
         text-transform: uppercase;
         color: $lightBlue;
 
         @include max("lg") {
-          margin-top: vw(24);
+          margin-top: vw(22);
         }
 
         @include max("sm") {
@@ -204,7 +189,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: vwx(170) vwx(80);
+    padding: vwx(153) vwx(72);
     text-align: center;
 
     @include max("md") {
@@ -216,7 +201,7 @@
     }
 
     &__title {
-      margin-bottom: vwx(109);
+      margin-bottom: vwx(98);
 
       @include max("md") {
         margin-bottom: vws(30);
@@ -226,14 +211,14 @@
     &__buttons {
       font-family: $openSans;
       font-weight: 700;
-      font-size: vwx(36);
-      line-height: vwx(42);
+      font-size: vwx(32);
+      line-height: vwx(38);
       text-transform: uppercase;
       color: $white;
 
       @include max("lg") {
-        font-size: vw(22);
-        line-height: vw(24);
+        font-size: vw(20);
+        line-height: vw(22);
       }
 
       @include max("md") {
@@ -254,12 +239,12 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        min-height: vwx(164);
-        padding: vwx(40) vwx(82);
-        border-radius: vwx(150);
+        min-height: vwx(148);
+        padding: vwx(36) vwx(74);
+        border-radius: vwx(135);
 
         @include max("lg") {
-          border-radius: vw(150);
+          border-radius: vw(135);
         }
 
         @include max("md") {
@@ -274,7 +259,7 @@
         }
 
         &--primary {
-          margin-bottom: vwx(60);
+          margin-bottom: vwx(54);
 
           @include max("sm") {
             margin-bottom: vws(26);
@@ -299,7 +284,7 @@
         z-index: 0;
         width: 100%;
         height: 100%;
-        border-radius: vwx(150);
+        border-radius: vwx(135);
         background: radial-gradient(
           50% 50% at 50% 50%,
           #2babce 0%,
@@ -308,18 +293,18 @@
         filter: blur(7px);
 
         @include max("lg") {
-          border-radius: vw(150);
+          border-radius: vw(135);
         }
 
         @include max("md") {
-          border-radius: vws(150);
+          border-radius: vws(135);
         }
       }
 
       &-checkmark {
         position: absolute;
-        top: vwx(-31);
-        left: vwx(20);
+        top: vwx(-28);
+        left: vwx(18);
         opacity: 0;
         visibility: hidden;
         transition: $transition;
@@ -334,8 +319,8 @@
         }
 
         svg {
-          width: vwx(130);
-          height: vwx(161);
+          width: vwx(117);
+          height: vwx(145);
 
           @include max("md") {
             width: vws(40);
