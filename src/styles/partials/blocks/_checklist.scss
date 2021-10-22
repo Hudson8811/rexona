@@ -1,5 +1,5 @@
 .checklist {
-  padding: vwx(67) vwx(27) vwx(32);
+  padding: vwx(47) vwx(27) vwx(32);
 
   @include max("lg") {
     padding-top: vw(32);
@@ -14,8 +14,8 @@
     padding: vwx(44) vwx(92) vwx(29) vwx(138);
     font-family: $roboto;
     font-weight: 500;
-    font-size: vwx(43);
-    line-height: vwx(47);
+    font-size: vwx(36);
+    line-height: vwx(40);
     letter-spacing: 0.05em;
     color: $darkBlue;
 
@@ -170,7 +170,7 @@
   }
 
   &__title {
-    max-width: vwx(810);
+    max-width: vwx(830);
     margin: vwx(32) auto;
     font-family: $averta;
     font-weight: 800;
