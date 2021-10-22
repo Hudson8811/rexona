@@ -30,13 +30,23 @@ function navigation() {
         if (currentSection < SECTIONS.length - 1) {
           if (document.querySelector(SECTIONS[currentSection + 1]).classList.contains('active')) {
             currentSection++;
-
-            moveToTargetBlock(SECTIONS[currentSection]);
+          } else {
+            currentSection = 4;
           }
+
+          moveToTargetBlock(SECTIONS[currentSection]);
         }
       } else if (e.direction === 'up') {
         if (currentSection > 0) {
-          currentSection--;
+          if (document.querySelector(SECTIONS[currentSection - 1]).classList.contains('active')) {
+            currentSection--;
+          } else {
+            if (document.querySelector(SECTIONS[currentSection - 2]).classList.contains('active')) {
+              currentSection = 2;
+            } else {
+              currentSection = 1;
+            }
+          }
 
           moveToTargetBlock(SECTIONS[currentSection]);
         }
