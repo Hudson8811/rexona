@@ -10,7 +10,7 @@
 //= ./navigation/fillAnswerBlock.js
 
 function navigation() {
-  const SECTIONS = [ '#first', '#heroes', '#question', '#answer', '#quiz' ];
+  const SECTIONS = [ '#first', '#heroes', '#question', '#answer', '#checklist', '#quiz' ];
 
   let selectedHero = {},
     currentSection = 0;
