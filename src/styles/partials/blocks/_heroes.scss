@@ -144,12 +144,12 @@
       }
 
       svg {
-        width: vwx(52);
+        width: vwx(49);
         height: vwx(65);
 
         @include max("sm") {
           width: vws(40);
-          height: vws(50);
+          height: vws(53);
         }
       }
     }

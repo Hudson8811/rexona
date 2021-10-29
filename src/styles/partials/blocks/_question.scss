@@ -319,17 +319,17 @@
         }
 
         svg {
-          width: vwx(117);
-          height: vwx(145);
+          width: vwx(111);
+          height: vwx(147);
 
           @include max("md") {
             width: vws(40);
-            height: vws(50);
+            height: vws(53);
           }
 
           @include max("sm") {
             width: vws(60);
-            height: vws(75);
+            height: vws(80);
           }
         }
       }

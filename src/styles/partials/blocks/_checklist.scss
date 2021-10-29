@@ -143,27 +143,27 @@
       &::after {
         content: "";
         position: absolute;
-        top: vwx(-20);
-        left: 0;
-        width: vwx(58);
-        height: vwx(73);
-        background: url("../images/checkmark-dark.svg") no-repeat;
+        top: vwx(-30);
+        left: vwx(5);
+        width: vwx(52);
+        height: vwx(69);
+        background: url("../images/checkmark-dark-new.svg") no-repeat;
         background-size: contain;
         opacity: 0;
         transition: $transition;
 
         @include max("md") {
-          top: vws(-6);
+          top: vws(-12);
           left: vws(2);
           width: vws(24);
-          height: vws(30);
+          height: vws(32);
         }
 
         @include max("sm") {
-          top: vws(-11);
-          left: vws(4);
+          top: vws(-16);
+          left: vws(8);
           width: vws(48);
-          height: vws(60);
+          height: vws(64);
         }
       }
     }

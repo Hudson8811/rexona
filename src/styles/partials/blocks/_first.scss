@@ -88,22 +88,17 @@
     }
 
     &__logo {
-      width: vwx(78);
-      height: vwx(97);
+      width: vwx(435);
+      height: vwx(119);
 
       @include max("lg") {
-        width: vw(45);
-        height: vw(56);
+        width: vw(200);
+        height: vw(55);
       }
 
       @include max("md") {
-        width: vws(48);
-        height: vws(60);
-      }
-
-      @include max("sm") {
-        width: vws(64);
-        height: vws(80);
+        width: vws(122);
+        height: vws(33);
       }
 
       &-item {
@@ -250,7 +245,7 @@
   &-bottom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     &__rexona {
       width: vwx(206);

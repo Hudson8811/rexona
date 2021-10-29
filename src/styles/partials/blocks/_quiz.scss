@@ -161,27 +161,27 @@
       &::after {
         content: "";
         position: absolute;
-        top: vwx(-32);
-        left: 0;
-        width: vwx(58);
-        height: vwx(73);
-        background: url("../images/checkmark-dark.svg") no-repeat;
+        top: vwx(-36);
+        left: vwx(-2);
+        width: vwx(52);
+        height: vwx(69);
+        background: url("../images/checkmark-dark-new.svg") no-repeat;
         background-size: contain;
         opacity: 0;
         transition: $transition;
 
         @include max("md") {
           top: vws(-15);
-          left: 0;
+          left: vws(-1);
           width: vws(24);
-          height: vws(30);
+          height: vws(32);
         }
 
         @include max("sm") {
-          top: vws(-25);
+          top: vws(-35);
           left: 0;
           width: vws(48);
-          height: vws(60);
+          height: vws(64);
         }
       }
     }
@@ -273,6 +273,57 @@
           min-width: vws(288);
         }
       }
+    }
+
+    &__ozon {
+      position: absolute;
+      bottom: vwx(107);
+      left: vwx(187);
+      width: vwx(293);
+      height: vwx(244);
+
+      @include hover {
+        svg {
+          path {
+            fill: $darkBlue;
+          }
+        }
+      }
+
+      @include max("md") {
+        bottom: vws(10);
+        left: vws(10);
+        width: vws(75);
+        height: vws(62);
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+          transition: $transition;
+        }
+      }
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   left: 0;
+      //   bottom: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   background-color: transparent;
+      //   border: vwx(5) solid $white;
+      //   backdrop-filter: blur(22px);
+      //   border-radius: 250px;
+      // }
     }
   }
 
