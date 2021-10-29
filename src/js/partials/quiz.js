@@ -23,7 +23,7 @@ function quiz() {
     },
   };
 
-  const quiz = document.getElementById('quiz'),
+  const quiz = document.getElementById('test'),
     sections = quiz.querySelectorAll('.quiz-sections__item'),
     result = document.getElementById('result'),
     resultTitle = quiz.querySelector('.quiz-reg__title'),

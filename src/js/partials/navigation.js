@@ -10,14 +10,13 @@
 //= ./navigation/fillAnswerBlock.js
 
 function navigation() {
-  const SECTIONS = [ '#first', '#heroes', '#question', '#answer', '#checklist', '#quiz' ];
+  const SECTIONS = [ '#first', '#women', '#question', '#answer', '#checklist', '#test' ];
 
   let selectedHero = {},
     currentSection = 0;
 
   const getSectionIndex = elem => {
     for (const key in SECTIONS) {
-      console.log(key);
       if (SECTIONS[key] === elem) return key;
     }
   };
