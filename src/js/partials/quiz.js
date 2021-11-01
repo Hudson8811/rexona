@@ -78,8 +78,6 @@ function quiz() {
     if (e.target.classList.contains('quiz-modal__overlay') || e.target.classList.contains('quiz-modal__close')) {
       modal.classList.remove('active');
     }
-
-    // console.log(e.target);
   });
 
   form.addEventListener('submit', e => {
