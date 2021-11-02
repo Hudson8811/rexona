@@ -74,6 +74,11 @@
     position: relative;
     height: 100vh;
 
+    @include max('sm') {
+      min-height: 100vh;
+      height: auto;
+    }
+
     &__item {
       position: absolute;
       top: 0;
@@ -94,6 +99,8 @@
       transition: $transition;
 
       &.active {
+        position: relative;
+        min-height: 100vh;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -206,7 +213,7 @@
     }
 
     @include max("sm") {
-      padding: vws(103) vws(20) vws(101);
+      padding: vws(30) vws(20) vws(30);
     }
 
     &__title {
@@ -297,6 +304,13 @@
         height: vws(62);
       }
 
+      @include max('sm') {
+        position: static;
+        margin-top: 20px;
+        width: vws(142);
+        height: vws(119);
+      }
+
       svg {
         width: 100%;
         height: 100%;
@@ -333,6 +347,10 @@
 
     @include max("md") {
       padding: vws(63) vws(20);
+    }
+
+    @include max('sm') {
+      padding: vws(40) vws(20);
     }
 
     &__position {
@@ -384,6 +402,10 @@
 
     @include max("md") {
       padding: vws(63) vws(20) vws(92);
+    }
+
+    @include max('sm') {
+      padding: vws(43) vws(20) vws(62);
     }
 
     &__bg {
